@@ -1,7 +1,7 @@
 
 export default function LadingBody() {
   return (
-    <div>
+    <div >
         <LandingBodyTitle/>
     </div>
   )

@@ -1,7 +1,39 @@
-import fondo from './img/img-body.png';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 export default function LandingBody() {
   return (
+    <Container  className="landing-container d-flex align-items-center">
+      <Row className="landing-row">
+        <Col>
+          <h1>Impulsando la Industria Local</h1>
+          <h3>+50 años representando a las empresas quilmeñas</h3>
+
+          <div className="container-text-links">
+            <a className="btn-title btn" href="#">Conocé nuestros servicios</a>
+            <a className="btn-title btn primary" href="#">Asociate</a>
+          </div>
+        </Col>
+        <Col>
+            {/* Aquí podrías agregar una imagen o algún otro contenido relevante para el título */}
+        </Col>
+
+      </Row>
+    </Container>
+  )
+}
+
+// File: src/LandingBodyTitle.jsx 
+/*
+ <div className="container-img-title">
+            <img src={fondo} alt="Fondo de la landing" />
+        </div>{}
+}
+
+------
+
     <div className="container-title">
        
         
@@ -14,20 +46,13 @@ export default function LandingBody() {
             </h3>
             
             <div className='container-text-links'>
-                <a  div='btn-title' href="#" >Conoce nuestros servicios</a>
-                <a  div='btn-title' href="#" >Asociate</a>
+                <a  div='btn-title btn' href="#" >Conoce nuestros servicios</a>
+                <a  div='btn-title btn' href="#" >Asociate</a>
             </div>
 
         </div>        
           
     </div>
-  )
-}
 
-// File: src/LandingBodyTitle.jsx 
-/*
- <div className="container-img-title">
-            <img src={fondo} alt="Fondo de la landing" />
-        </div>{}
 
 */
