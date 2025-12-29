@@ -1,30 +1,36 @@
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 
+import Ubicacion from './img/icons/location-icon.svg';
+
 export function LandingBodyCards() {
   return (
     <CardGroup>
       <Card >
         <Card.Body className='d-flex flex-column align-items-center' >
-          <Card.Title>+300</Card.Title>
+          <Card.Title><h1 className='info-text-h1'>+300</h1></Card.Title>
           <Card.Text>
-           empresas asociadas
+            <p className=''>           
+                empresas asociadas
+            </p>
           </Card.Text>
         </Card.Body>
       </Card>
       <Card>
         <Card.Body className='d-flex flex-column align-items-center'>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title><h1 className='info-text-h1'>+50</h1></Card.Title>
           <Card.Text>
-            representacion regional
+            <p className=''>
+              años de trayectoria
+            </p>
           </Card.Text>
         </Card.Body>
       </Card>
       <Card>
         <Card.Body className='d-flex flex-column align-items-center'>
-          <Card.Title>+50</Card.Title>
+          <Card.Title><img src={Ubicacion} alt="Ubicación" style={{height:'80px'}} /></Card.Title>
           <Card.Text>
-         años de trayectoria.
+         representacion regional
           </Card.Text>
         </Card.Body>
       </Card>

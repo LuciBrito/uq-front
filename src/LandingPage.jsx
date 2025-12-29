@@ -6,26 +6,47 @@ import LandingFooter from "./LandingFooter";
 
 import LandingHeader from "./LandingHeader";
 
+import SimpleParallax from "simple-parallax-js";
+
+import fondo from './img/img-contact.png';
+
+
+
+
 
 export default function LandingPage() {
   return (
     <div >
         
         <LandingHeader/>
-        <div className="fondo-landing-header">
+        <section className="parallax">
           <LandingBody/>
-        </div>
-        <div className="fondo-landing-info">
+        </section>
+
+        <section className="parallax2">
           <LandingBodyInfo/>
-        </div>
+        </section>
+
+       <section className="parallax"> 
+     
         <LandingBodyC/>
-
+      </section>
+      
+      <section className="parallax3">
         <LandingContact/>
+      </section>
 
+      
         <LandingFooter />
 
     </div>
   )
 }
 
-// 
+/*
+
+        <div className="fondo-landing-info">
+          <LandingBodyInfo/>
+        </div>
+
+*/

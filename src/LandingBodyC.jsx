@@ -4,7 +4,7 @@ import img from './img/img-body.png';
 
 export default function LandingBodyC() {
   return (
-    <div className="h-100 d-flex justify-content-around align-items-center flex-wrap g-1 landing-container">
+    <div className="h-100 d-flex justify-content-around align-items-center flex-wrap gap-1 landing-container px-4 py-4">
         <Card style={{ width: '25rem' }}>
             <Card.Img variant="top" src={img}/>
             <Card.Body>
@@ -13,7 +13,6 @@ export default function LandingBodyC() {
                 Some quick example text to build on the card title and make up the
                 bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
             </Card.Body>
         </Card>
                 <Card style={{ width: '25rem' }}>
@@ -24,7 +23,6 @@ export default function LandingBodyC() {
                 Some quick example text to build on the card title and make up the
                 bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
             </Card.Body>
         </Card>
                 <Card style={{ width: '25rem' }}>
@@ -35,7 +33,6 @@ export default function LandingBodyC() {
                 Some quick example text to build on the card title and make up the
                 bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
             </Card.Body>
         </Card>
         <Card style={{ width: '25rem' }}>
@@ -46,7 +43,6 @@ export default function LandingBodyC() {
                 Some quick example text to build on the card title and make up the
                 bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
             </Card.Body>
         </Card>
                 <Card style={{ width: '25rem' }}>
@@ -57,7 +53,6 @@ export default function LandingBodyC() {
                 Some quick example text to build on the card title and make up the
                 bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
             </Card.Body>
         </Card>
         <Card style={{ width: '25rem' }}>
@@ -68,7 +63,6 @@ export default function LandingBodyC() {
                 Some quick example text to build on the card title and make up the
                 bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
             </Card.Body>
         </Card>
 
