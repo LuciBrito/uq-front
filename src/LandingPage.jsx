@@ -19,7 +19,7 @@ export default function LandingPage() {
     <div >
         
         <LandingHeader/>
-        <section className="parallax">
+        <section className="parallax ">
           <LandingBody/>
         </section>
 

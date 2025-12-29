@@ -3,9 +3,11 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 
+
+
 export default function LandingBody() {
   return (
-    <Container  className="landing-container d-flex align-items-center">
+    <Container  className="landing-container d-flex align-items-center py-xl-10">
       <Row className="landing-row">
         <Col>
           <h1>Impulsando la Industria Local</h1>
@@ -17,7 +19,7 @@ export default function LandingBody() {
           </div>
         </Col>
         <Col>
-            {/* Aquí podrías agregar una imagen o algún otro contenido relevante para el título */}
+      
         </Col>
 
       </Row>

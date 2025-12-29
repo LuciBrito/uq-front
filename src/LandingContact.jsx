@@ -9,7 +9,7 @@ import LandingContactCard from './LandingContactCard';
 
 export default function LandingContact() {
   return (
-    <Container className='landing-container justify-content-center align-items-center text-center py-4'>
+    <Container className='landing-container justify-content-center align-items-center text-center py-4 py-lg-5'>
         
         <h1 className='info-text-h1'>¿Necesitas asesoramiento institucional?</h1>
         <p className='info-text-h3 text-center'>Nuestro equipo esta disponible para ayudarte</p>

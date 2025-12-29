@@ -1,20 +1,7 @@
-import { useState } from "react";
+
 import logo from './img/logo-quilmes.png';
 
 export default function LandingHeader() {
-  const [openMenu, setOpenMenu] = useState(null);
-
-  const handleEnter = (menu) => {
-    if (window.innerWidth > 992) setOpenMenu(menu);
-  };
-
-  const handleLeave = () => {
-    if (window.innerWidth > 992) setOpenMenu(null);
-  };
-
-  const toggleMenu = (menu) => {
-    setOpenMenu(openMenu === menu ? null : menu);
-  };
 
   return (
     <header>
@@ -27,45 +14,18 @@ export default function LandingHeader() {
 
         <ul className="nav-links">
           <li><a href="">Inicio</a></li>
-
-          {/* QUIENES SOMOS */}
           <li>
-            <div
-              className={`nav-item ${openMenu === "quienes" ? "open" : ""}`}
-              onMouseEnter={() => handleEnter("quienes")}
-              onMouseLeave={handleLeave}
-            >
-              <a href="#" onClick={() => toggleMenu("quienes")}>
-                ¿Quiénes somos?
-              </a>
-              <div className="dropdown">
-                <a href="#">Historia</a>
-                <a href="#">Comisión Directiva</a>
-                <a href="#">Socios</a>
-              </div>
-            </div>
+            <a href="">¿Quiénes somos?</a>
           </li>
-
-          {/* DEPARTAMENTOS */}
           <li>
-            <div
-              className={`nav-item ${openMenu === "departamentos" ? "open" : ""}`}
-              onMouseEnter={() => handleEnter("departamentos")}
-              onMouseLeave={handleLeave}
-            >
-              <a href="#" onClick={() => toggleMenu("departamentos")}>
-                Departamentos
-              </a>
-              <div className="dropdown">
-                <a href="#">Depto 1</a>
-                <a href="#">Depto 2</a>
-                <a href="#">Depto 3</a>
-              </div>
-            </div>
+            <a href="">Departamentos</a>
           </li>
-
-          <li><a href="">Servicios</a></li>
-          <li><a href="">Capacitación</a></li>
+          <li>
+            <a href="">Servicios</a>
+          </li>
+          <li>
+            <a href="">Capacitación</a>
+          </li>
           <li><a href="#" className="btn-header">Asociate</a></li>
         </ul>
       </nav>
@@ -108,6 +68,43 @@ export default function Header() {
       </nav>
     </header>
   );
+
+
+
+          <li>
+            <div
+              className={`nav-item ${openMenu === "quienes" ? "open" : ""}`}
+              onMouseEnter={() => handleEnter("quienes")}
+              onMouseLeave={handleLeave}
+            >
+              <a href="#" onClick={() => toggleMenu("quienes")}>
+                ¿Quiénes somos?
+              </a>
+              <div className="dropdown">
+                <a href="#">Historia</a>
+                <a href="#">Comisión Directiva</a>
+                <a href="#">Socios</a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div
+              className={`nav-item ${openMenu === "departamentos" ? "open" : ""}`}
+              onMouseEnter={() => handleEnter("departamentos")}
+              onMouseLeave={handleLeave}
+            >
+              <a href="#" onClick={() => toggleMenu("departamentos")}>
+                Departamentos
+              </a>
+              <div className="dropdown">
+                <a href="#">Depto 1</a>
+                <a href="#">Depto 2</a>
+                <a href="#">Depto 3</a>
+              </div>
+            </div>
+          </li>
+
 
   */
 

@@ -9,7 +9,7 @@ import { LandingBodyCards } from './LandingBodyCards';
 export default function LandingBodyInfo() {
   return (
     <Container>
-        <Row className='landing-container align-items-center '>
+        <Row className='landing-container align-items-center  py-xl-10'>
           <Col>
              <h1 className='info-text-h1 pb-4'> ¿QUE HACEMOS? </h1>
             <LandingCarousel></LandingCarousel>
@@ -21,6 +21,8 @@ export default function LandingBodyInfo() {
             <p className='info-text-p'>
               La Unión Industrial de Quilmes es una de las entidades industriales más importante y reconocida de la región. Una de las características principales que nos identifican es la proactividad, el estar constantemente pendientes de las problemáticas que nos plantean nuestros asociados, asistiendo sus necesidades y brindándoles un servicio de calidad.
             </p>
+
+
             <div className="container-text-links">
                 <a className="btn btn-title " href="#">Conocé nuestros servicios</a>
                 <a className="btn btn-title " href="#">Asociate</a>

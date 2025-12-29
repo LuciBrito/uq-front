@@ -4,7 +4,7 @@ import img from './img/img-body.png';
 
 export default function LandingBodyC() {
   return (
-    <div className="h-100 d-flex justify-content-around align-items-center flex-wrap gap-1 landing-container px-4 py-4">
+    <div className="h-100 d-flex justify-content-around align-items-center flex-wrap gap-1 landing-container px-4 py-4 py-lg-8">
         <Card style={{ width: '25rem' }}>
             <Card.Img variant="top" src={img}/>
             <Card.Body>
