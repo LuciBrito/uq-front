@@ -10,7 +10,7 @@ import novedades from './img/img-novedades.png';
 
 export default function LandingBodyC() {
   return (
-    <Container className=" landing-container d-flex flex-wrap justify-content-center gap-4 px-8 py-4 py-lg-5  ">
+    <Container className=" landing-container d-flex flex-wrap justify-content-center gap-4 px-8 py-4 py-lg-5  cards-container ">
         <a className="text-decoration-none" href="">
             <Card className=" card-info " style={{ width:'100%', maxWidth: '25rem' }}>
                 <Card.Img variant="top" src={servicios}/>

@@ -324,6 +324,24 @@ footer{
         width: 100vh;
      
     }
+    html, body{
+        min-width: 100vh;
+        display: flex;
+    }
+    
+    .info-text-h1 {
+        font-size: 33px;
+    }
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: auto;
+        flex-wrap: none !important;
+        background-color: red !important;
+    }
+       .card-info{
+        max-width: 15rem !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -345,8 +363,27 @@ footer{
         flex-direction: column;
     }
     .media-aux {
-         width: 100vh !important
+         min-width: 100vh !important;
      
     }
-}
 
+    .info-text-h1 {
+        font-size: 33px;
+    }
+
+    html, body{
+        min-width: 100vh;
+        display: flex;
+    }
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        flex-wrap: none !important;
+        background-color: red !important;
+        
+    }
+    .card-info{
+        max-width: 15rem !important;
+    }
+}

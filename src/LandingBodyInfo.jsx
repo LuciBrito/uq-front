@@ -16,7 +16,7 @@ export default function LandingBodyInfo() {
             <LandingBodyCards></LandingBodyCards>
 
           </Col>
-          <Col>
+          <Col className='align-content-center'>
             <h2 className='info-text-h2'>Representando a la industria de Quilmes desde 1971</h2>
             <p className='info-text-p'>
               La Unión Industrial de Quilmes es una de las entidades industriales más importante y reconocida de la región. Una de las características principales que nos identifican es la proactividad, el estar constantemente pendientes de las problemáticas que nos plantean nuestros asociados, asistiendo sus necesidades y brindándoles un servicio de calidad.
