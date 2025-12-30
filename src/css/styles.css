@@ -327,26 +327,12 @@ footer{
    .aux-none{
         display: none !important;
     }
-    
-    .container-title .container-text-title{
-        width: 85%;
-        margin-left: 20px;
-    }
-    .landing-row h1{
-        font-size: 50px;
-    }
-    .landing-row h3{
-        font-size: 24px;
-    }
+
     .media-aux {
         width: 100vh;
      
     }
    
-    
-    .info-text-h1 {
-        font-size: 33px;
-    }
 
         .landing-container {
         height: auto !important;
@@ -372,23 +358,12 @@ footer{
      .aux-none{
         display: none !important;
     }
-    .container-title .container-text-title{
-        width: 90%;
-        margin-left: 15px;
-    }
-    .landing-row h1{
-        font-size: 32px;
-    }
-    .landing-row h3{
-        font-size: 18px;
-    }
+   
     header nav {
         flex-direction: column;
         gap: 10px;
     }
-    .container-body-info {
-        flex-direction: column;
-    }
+
     .media-aux {
          min-width: 100vh !important;
      
