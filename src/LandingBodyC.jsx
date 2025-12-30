@@ -1,10 +1,10 @@
 import { Container } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 
-import asociarte from './img/asociarte.png';
-import servicios from './img/servicios.png';
-import departamentos from './img/departamentos.png';
-import novedades from './img/novedades.png';
+import asociarte from './img/img-asociarte.png';
+import servicios from './img/img-servicios.png';
+import departamentos from './img/img-departamentos.png';
+import novedades from './img/img-novedades.png';
 
 
 
