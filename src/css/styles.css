@@ -347,12 +347,17 @@ footer{
     .info-text-h1 {
         font-size: 33px;
     }
+
+        .landing-container {
+        height: auto !important;
+    }   
     .cards-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: auto;
         flex-wrap: none !important;
       
+
     }
        .card-info{
         max-width: 15rem !important;
@@ -388,6 +393,9 @@ footer{
          min-width: 100vh !important;
      
     }
+        .landing-container {
+        height: auto !important;
+    }   
 
     .info-text-h1 {
         font-size: 33px;
@@ -421,6 +429,9 @@ footer{
     .card-info{
         max-width: 20rem !important;
     }
+    .landing-container {
+        height: auto !important;
+    }   
 }
 
 /* Laptops pequeños / tablets en landscape (769px - 1024px) */
@@ -435,4 +446,7 @@ footer{
     .card-info{
         max-width: 15rem !important;
     }
+        .landing-container {
+        height: auto !important;
+    }  
 }
