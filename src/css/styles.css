@@ -187,8 +187,7 @@ header  .nav-links .btn-header:hover {
 
 
 .landing-container {
-  min-height: 100vh;
-
+  height: 100vh;
 }
 
 /*.landing-row {
@@ -308,6 +307,17 @@ footer{
   background: #f2f4ff;
 }
 
+.cards-container {
+    display: flex !important  ;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    width: 70%;
+    max-width: fit-content;
+   
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
      html, body{
@@ -400,16 +410,16 @@ footer{
 /* Media queries para laptops */
 
 /* Laptops grandes (1025px - 1366px) */
-@media (min-width: 1025px) and (max-width: 1366px) {
+@media (min-width: 1025px) and (max-width: 1920px) {
     .cards-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 24px;
         flex-wrap: none !important;
-        
+       
     }
     .card-info{
-        max-width: 15rem !important;
+        max-width: 20rem !important;
     }
 }
 

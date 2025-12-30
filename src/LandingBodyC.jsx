@@ -10,67 +10,69 @@ import novedades from './img/img-novedades.png';
 
 export default function LandingBodyC() {
   return (
-    <Container className=" landing-container d-flex flex-wrap justify-content-center gap-4 px-8 py-4 py-lg-5  cards-container ">
-        <a className="text-decoration-none" href="">
-            <Card className=" card-info " style={{ width:'100%', maxWidth: '25rem' }}>
-                <Card.Img variant="top" src={servicios}/>
-                <Card.Body>
-                    <Card.Title >
-                        <h3 className='info-text-p text-center'>
-                            Servicios
-                        </h3>
-                    </Card.Title>
-                    <Card.Text className='text-center'>
-                        Conoce mas sobre todos los servicios que ofrecemos.
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-        </a>
-        <a className="text-decoration-none" href="">
-            <Card className=" card-info " style={{  width:'100%', maxWidth: '25rem' }}>
-                <Card.Img variant="top" src={departamentos}/>
-                <Card.Body>
-                    <Card.Title>
-                        <h3 className='info-text-p text-center'>
-                            Departamentos
-                        </h3>   
-                    </Card.Title>
-                    <Card.Text className='text-center'>
-                        Descubri los distintos departamentos que conforman nuestra organización.
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-        </a>
-        <a className="text-decoration-none" href="">
-            <Card className=" card-info " style={{  width:'100%', maxWidth: '25rem' }}>
-                <Card.Img variant="top" src={novedades}/>
-                <Card.Body>
-                    <Card.Title>
-                        <h3 className='info-text-p text-center'>
-                        Novedades 
-                        </h3>
-                    </Card.Title>
-                    <Card.Text className='text-center'>
-                        Mantenete al día con las últimas novedades y eventos.
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-        </a>
-        <a className="text-decoration-none" href="">
-            <Card className=" card-info " style={{  width:'100%', maxWidth: '25rem' }}>
-                <Card.Img variant="top" src={asociarte}/>
-                <Card.Body>
-                    <Card.Title>
-                        <h3 className='info-text-p text-center'>
-                            Asociate 
-                        </h3>
-                    </Card.Title>
-                    <Card.Text className='text-center'>
-                        Descubre los beneficios de asociarte con nosotros.
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-        </a>
+    <Container className=" landing-container d-flex flex-wrap justify-content-center gap-4 px-8 py-4 py-lg-5   ">
+        <div className='cards-container'>    
+            <a className="text-decoration-none" href="">
+                <Card className=" card-info " style={{ width:'100%', maxWidth: '25rem' }}>
+                    <Card.Img variant="top" src={servicios}/>
+                    <Card.Body>
+                        <Card.Title >
+                            <h3 className='info-text-p text-center'>
+                                Servicios
+                            </h3>
+                        </Card.Title>
+                        <Card.Text className='text-center'>
+                            Conoce mas sobre todos los servicios que ofrecemos.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+            </a>
+            <a className="text-decoration-none" href="">
+                <Card className=" card-info " style={{  width:'100%', maxWidth: '25rem' }}>
+                    <Card.Img variant="top" src={departamentos}/>
+                    <Card.Body>
+                        <Card.Title>
+                            <h3 className='info-text-p text-center'>
+                                Departamentos
+                            </h3>   
+                        </Card.Title>
+                        <Card.Text className='text-center'>
+                            Descubri los distintos departamentos que conforman nuestra organización.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+            </a>
+            <a className="text-decoration-none" href="">
+                <Card className=" card-info " style={{  width:'100%', maxWidth: '25rem' }}>
+                    <Card.Img variant="top" src={novedades}/>
+                    <Card.Body>
+                        <Card.Title>
+                            <h3 className='info-text-p text-center'>
+                            Novedades 
+                            </h3>
+                        </Card.Title>
+                        <Card.Text className='text-center'>
+                            Mantenete al día con las últimas novedades y eventos.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+            </a>
+            <a className="text-decoration-none" href="">
+                <Card className=" card-info " style={{  width:'100%', maxWidth: '25rem' }}>
+                    <Card.Img variant="top" src={asociarte}/>
+                    <Card.Body>
+                        <Card.Title>
+                            <h3 className='info-text-p text-center'>
+                                Asociate 
+                            </h3>
+                        </Card.Title>
+                        <Card.Text className='text-center'>
+                            Descubre los beneficios de asociarte con nosotros.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+            </a>
+        </div>
   </Container>
   );
 }
