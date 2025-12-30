@@ -188,7 +188,7 @@ header  .nav-links .btn-header:hover {
 
 .landing-container {
   min-height: 100vh;
-  
+
 }
 
 /*.landing-row {
@@ -309,31 +309,44 @@ footer{
 }
 
 /* Media Queries */
-@media (max-width: 992px) {
-
-}
-
-/* Laptops estándar (1024px a 1919px) */
-@media (min-width: 1024px) {
-    .landing-row h1 {
-        font-size: 110px;
+@media (max-width: 768px) {
+    .container-title .container-text-title{
+        width: 85%;
+        margin-left: 20px;
     }
-    .container-title .container-text-title {
-        width: 45%;
-        margin-left: 100px;
+    .landing-row h1{
+        font-size: 50px;
     }
-    .landing-container {
-        min-height: 100vh;
-        overflow-x: hidden;
+    .landing-row h3{
+        font-size: 24px;
+    }
+    .media-aux {
+        width: 100vh;
+     
     }
 }
 
-/* Laptops grandes (1920px+) */
-@media (min-width: 1920px) {
-    .landing-row h1 {
-        font-size: 140px;
+@media (max-width: 480px) {
+    .container-title .container-text-title{
+        width: 90%;
+        margin-left: 15px;
     }
-    .container-title .container-text-title {
-        margin-left: 150px;
+    .landing-row h1{
+        font-size: 32px;
+    }
+    .landing-row h3{
+        font-size: 18px;
+    }
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .container-body-info {
+        flex-direction: column;
+    }
+    .media-aux {
+         width: 100vh !important
+     
     }
 }
+

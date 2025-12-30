@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 
 export default function LandingBody() {
   return (
-    <Container  className="landing-container d-flex align-items-center py-xl-10">
+    <Container  className="landing-container d-flex align-items-center py-xl-10 media-aux">
       <Row className="landing-row">
         <Col>
           <h1>Impulsando la Industria Local</h1>

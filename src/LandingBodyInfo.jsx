@@ -8,8 +8,8 @@ import { LandingBodyCards } from './LandingBodyCards';
 
 export default function LandingBodyInfo() {
   return (
-    <Container>
-        <Row className='landing-container align-items-center  py-xl-10'>
+    <Container className='landing-container align-items-center py-4 py-lg-5 media-aux'>
+        <Row >
           <Col>
              <h1 className='info-text-h1 pb-4'> ¿QUE HACEMOS? </h1>
             <LandingCarousel></LandingCarousel>

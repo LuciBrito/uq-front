@@ -16,7 +16,7 @@ import fondo from './img/img-contact.png';
 
 export default function LandingPage() {
   return (
-    <div >
+    <div className="landing-query">
         
         <LandingHeader/>
         <section className="parallax ">
