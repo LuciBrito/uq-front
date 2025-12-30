@@ -395,3 +395,34 @@ footer{
         max-width: 15rem !important;
     }
 }
+
+
+/* Media queries para laptops */
+
+/* Laptops grandes (1025px - 1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        flex-wrap: none !important;
+        
+    }
+    .card-info{
+        max-width: 15rem !important;
+    }
+}
+
+/* Laptops pequeños / tablets en landscape (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        flex-wrap: none !important;
+        
+    }
+    .card-info{
+        max-width: 15rem !important;
+    }
+}
