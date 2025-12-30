@@ -198,7 +198,13 @@ header  .nav-links .btn-header:hover {
   justify-content: flex-start; 
   text-align: center;
 }*/
+.card-info{
+    transition: all 0.3s ease;
+}
+.card-info:hover{
 
+    transform: scale(1.05);
+}
 
 footer{
     background-color:#d6e4fc;
@@ -302,17 +308,32 @@ footer{
   background: #f2f4ff;
 }
 
-/* 📱 MOBILE */
+/* Media Queries */
 @media (max-width: 992px) {
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
 
-  .dropdown {
-    position: static;
-    box-shadow: none;
-    padding-left: 12px;
-  }
+}
+
+/* Laptops estándar (1024px a 1919px) */
+@media (min-width: 1024px) {
+    .landing-row h1 {
+        font-size: 110px;
+    }
+    .container-title .container-text-title {
+        width: 45%;
+        margin-left: 100px;
+    }
+    .landing-container {
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+}
+
+/* Laptops grandes (1920px+) */
+@media (min-width: 1920px) {
+    .landing-row h1 {
+        font-size: 140px;
+    }
+    .container-title .container-text-title {
+        margin-left: 150px;
+    }
 }
