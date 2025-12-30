@@ -181,7 +181,7 @@ header  .nav-links .btn-header:hover {
 }
 .info-text-p{
     color: #8588C5;
-
+    font-weight: bold;
     font-size: 20px;
 }
 
@@ -310,6 +310,14 @@ footer{
 
 /* Media Queries */
 @media (max-width: 768px) {
+     html, body{
+        min-width: 100vh;
+        display: flex;
+    }
+   .aux-none{
+        display: none !important;
+    }
+    
     .container-title .container-text-title{
         width: 85%;
         margin-left: 20px;
@@ -324,10 +332,7 @@ footer{
         width: 100vh;
      
     }
-    html, body{
-        min-width: 100vh;
-        display: flex;
-    }
+   
     
     .info-text-h1 {
         font-size: 33px;
@@ -337,7 +342,7 @@ footer{
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: auto;
         flex-wrap: none !important;
-        background-color: red !important;
+      
     }
        .card-info{
         max-width: 15rem !important;
@@ -345,6 +350,13 @@ footer{
 }
 
 @media (max-width: 480px) {
+       html, body{
+        min-width: 100vh;
+        display: flex;
+    }
+     .aux-none{
+        display: none !important;
+    }
     .container-title .container-text-title{
         width: 90%;
         margin-left: 15px;
@@ -371,16 +383,12 @@ footer{
         font-size: 33px;
     }
 
-    html, body{
-        min-width: 100vh;
-        display: flex;
-    }
+ 
     .cards-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 24px;
         flex-wrap: none !important;
-        background-color: red !important;
         
     }
     .card-info{

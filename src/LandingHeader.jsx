@@ -12,7 +12,7 @@ export default function LandingHeader() {
           </div>
         </ul>
 
-        <ul className="nav-links">
+        <ul className="nav-links aux-none">
           <li><a href="">Inicio</a></li>
           <li>
             <a href="">¿Quiénes somos?</a>

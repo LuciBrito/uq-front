@@ -6,6 +6,9 @@ import logo from './img/logo-quilmes.png';
 import Instragram from './img/icons/instragram-icon.svg';
 import Whatsapp from './img/icons/whatsapp-icon.svg';
 import Linkedin from './img/icons/linkedin-icon.svg';
+import Ubicacion from './img/icons/location-icon.svg';
+import Telefono from './img/icons/phone-icon.svg';
+import Mensaje from './img/icons/message-icon.svg';
 
 
 export default function LandingFooter() {
@@ -33,12 +36,11 @@ export default function LandingFooter() {
                         <li className='info-text-p pb-2'>Asociate</li>
                     </ul>
                 </Col>  
-                <Col className="text-center py-3 ">
+                <Col className="text-center py-3 text-start">
                     <ul className='list-unstyled '>
-                        <li className='info-text-p pb-2'>Contact</li>
-                        <li className='info-text-p pb-2'>info@mail</li>
-                        <li className='info-text-p pb-2'>54 11 301030313</li>
-                        <li className='info-text-p pb-2'>quilmes, buenos aires</li>
+                        <li className='info-text-p pb-2 text-start'> <img src={Mensaje} className="icon-color" alt="Email" style={{ width: '20px', marginRight: '10px' }} />uiquilmes.adm@gmail.com</li>
+                        <li className='info-text-p pb-2 text-start'><img src={Telefono} alt="Telefono" style={{ width: '20px', marginRight: '10px' }} />Telefono: 11 7522-7496</li>
+                        <li className='info-text-p pb-2 text-start'><img src={Ubicacion} alt="Ubicacion" style={{ width: '20px', marginRight: '10px' }} />Direccion: Alvear 867, B1878 Quilmes</li>
                     </ul>
                 </Col>  
 

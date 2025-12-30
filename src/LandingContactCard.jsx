@@ -9,9 +9,9 @@ export default function LandingContactCard() {
     <Card style={{ width: 'auto' }}>
       <Card.Body>
         <ul className='list-unstyled text-start'>
-            <li className='info-text-p'><img src={Mensaje} className="icon-color" alt="Email" style={{ width: '20px', marginRight: '10px' }} /> Info@uiquilmes.org</li>
-            <li className='info-text-p'><img src={Telefono} alt="Telefono" style={{ width: '20px', marginRight: '10px' }} /> Telefono: 11 2345-6789</li>
-            <li className='info-text-p'><img src={Ubicacion} alt="Ubicacion" style={{ width: '20px', marginRight: '10px' }} /> Direccion: Av. Siempre Viva 123</li>
+            <li className='info-text-p'><img src={Mensaje} className="icon-color" alt="Email" style={{ width: '20px', marginRight: '10px' }} /> uiquilmes.adm@gmail.com</li>
+            <li className='info-text-p'><img src={Telefono} alt="Telefono" style={{ width: '20px', marginRight: '10px' }} /> Telefono: 11 7522-7496</li>
+            <li className='info-text-p'><img src={Ubicacion} alt="Ubicacion" style={{ width: '20px', marginRight: '10px' }} /> Direccion: Alvear 867, B1878 Quilmes</li>
 
         </ul>
       </Card.Body>

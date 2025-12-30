@@ -10,7 +10,7 @@ export function LandingBodyCards() {
         <Card.Body className='d-flex flex-column align-items-center' >
           <Card.Title><h1 className='info-text-h1'>+300</h1></Card.Title>
           <Card.Text>
-            <p className=''>           
+            <p className='text-center'>           
                 empresas asociadas
             </p>
           </Card.Text>
@@ -20,7 +20,7 @@ export function LandingBodyCards() {
         <Card.Body className='d-flex flex-column align-items-center'>
           <Card.Title><h1 className='info-text-h1'>+50</h1></Card.Title>
           <Card.Text>
-            <p className=''>
+            <p className='text-center'>
               años de trayectoria
             </p>
           </Card.Text>
@@ -30,7 +30,9 @@ export function LandingBodyCards() {
         <Card.Body className='d-flex flex-column align-items-center'>
           <Card.Title><img src={Ubicacion} alt="Ubicación" style={{height:'80px'}} /></Card.Title>
           <Card.Text>
-         representacion regional
+              <p className='text-center'>
+                representacion regional
+              </p>
           </Card.Text>
         </Card.Body>
       </Card>
