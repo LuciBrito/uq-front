@@ -51,7 +51,7 @@ export default function LandingBodyC() {
                         </h3>
                     </Card.Title>
                     <Card.Text className='text-center'>
-                        Mantente al día con las últimas novedades y eventos.
+                        Mantenete al día con las últimas novedades y eventos.
                     </Card.Text>
                 </Card.Body>
             </Card>
