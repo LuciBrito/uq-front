@@ -226,11 +226,13 @@ footer{
   background-position: center;
 }
 
+  
 
-
-.icon-color{
-    fill: #3F4FF9 !important;
-}   
+.row-historia{
+    background-color: #9ca2dd;
+    border-radius: 30px;
+    padding: 20px;
+}
 
 .parallax {
   height: 100vh;

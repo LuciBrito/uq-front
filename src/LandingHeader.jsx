@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import logo from './img/logo-quilmes.png';
 
 export default function LandingHeader() {
@@ -13,20 +13,31 @@ export default function LandingHeader() {
         </ul>
 
         <ul className="nav-links aux-none">
-          <li><a href="">Inicio</a></li>
           <li>
-            <a href="">¿Quiénes somos?</a>
+            <Link to="/">
+              Inicio
+            </Link></li>
+          <li>
+            <Link to="/historia">
+              Institucional
+            </Link>
           </li>
           <li>
-            <a href="">Departamentos</a>
+            <Link to="">
+              Departamentos
+            </Link>
           </li>
           <li>
-            <a href="">Servicios</a>
+            <Link to="">
+              Servicios
+            </Link>
           </li>
           <li>
-            <a href="">Capacitación</a>
+            <Link to="">
+              Capacitación
+            </Link>
           </li>
-          <li><a href="#" className="btn-header">Asociate</a></li>
+          <li><Link to="#" className="btn-header">Asociate</Link></li>
         </ul>
       </nav>
     </header>
