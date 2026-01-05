@@ -1,39 +1,110 @@
 import { Col, Container, Row } from 'react-bootstrap'
+import Card from 'react-bootstrap/Card';
 
 import img from './img/img-contact.png';
+import becas from './img/icons/becas-icon.svg';
+import uni from './img/icons/uni-icon.svg';
+import socios from './img/icons/socios-icon.svg';   
+import flor from './img/icons/flor-icon.svg';
 
-export const Historia = () => {
+
+
+export default function Historia() {
   return (
    <section className='parallax'> 
-        <Container className='PY-5 my-5'>
-            <h1 className='text-center'>Historia - EJEMPLO</h1>
+        <Container className='py-5 my-5'>
+            <h1 className='text-center color-text-1 '>Historia </h1>
+            <h3 className='text-center color-text-2'>Mas de 50 años acompañando la insdustria local</h3>
             <div> 
-                <p>
-                    La Unión de Industriales de Quilmes nació en un contexto de lucha contra la zonificación que, según la interpretación local, impulsaba la erradicación de la actividad industrial. En las primeras reuniones, muchas realizadas en la casa de Esteban Pellerano, estaba la semilla de lo que el 6 de diciembre de 1971 se iba a conocer como la Unión de Industriales del Partido de Quilmes.
-                    El primer socio fue Fioravanti Sorrentino, y el segundo, el mismo Pellerano, quien se convertiría en el primer presidente de la Unión. La primera sede se ubicó en H.Yrigoyen al 300, y operaban un gerente, dos empleados y un promotor. Pellerano sostenía además que por entonces “Quilmes, después de Rosario y Avellaneda era la tercera ciudad industrial del país."
-                    Esta primera gran batalla fue fundamental para las pequeñas y medianas empresas, que comprendieron que la unidad les otorgaba mayor fuerza para enfrentar los desafíos. 
-                    Con el tiempo, se comenzaron a ofrecer distintos servicios de asesoramiento en áreas como: laboral, administrativa, contable, jurídica, habilitaciones e instalaciones, ingeniería, agrimensura, seguridad e higiene.
-                    En 1990, la entidad firmó un convenio con la Municipalidad para la gestión del cobro de tasas municipales, un paso importante en su consolidación.
-                    Se sostuvo desde aquel entonces hasta la actualidad que: Unidos se tienen más fuerzas para resistir el atropello.
-                </p> 
-                <Row className='row-historia'>
+                <Row className='py-4'>
+                    <Col>
+                        <Card  style={{ width:'100%', maxWidth: '25rem' }}>
+                            <Card.Body>
+                                <Card.Title > <h3 className='color-text-1'>1971 - Fundacion</h3></Card.Title>
+                                <Card.Text className='color-text-2'>
+                                    Nace la UIQ en el Partido de Quilmes, impulsando el desarrollo industrial local.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card  style={{ width:'100%', maxWidth: '25rem' }}>
+                            <Card.Body>
+                                <Card.Title> <h3 className='color-text-1'>1987 - Casa propia</h3></Card.Title>
+                                <Card.Text className='color-text-2'>
+                                    Adquisicion de la sede ubicada en Alvear 867, Quilmes, tras años de crecimiento.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card  style={{ width:'100%', maxWidth: '25rem' }}>
+                            <Card.Body>
+                                <Card.Title> <h3 className='color-text-1'>1990+ - Crecimiento </h3></Card.Title>
+                                <Card.Text className='color-text-2'>
+                                    Expansion de servicios y productos, consolidando la presencia en el mercado.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+                
+                <Row className='row-historia py-4'>
                     <Col>
                         <h1>La casa propia</h1>
                         <p>
                             La búsqueda de la sede propia fue una aspiración que se concretó a fines de 1987 con  la adquisición de la vieja casa ubicada en Alvear 867. Ese mismo año se aprobó su remodelación, realizada en los primeros meses del año siguiente, aportando su fisonomía actual.
                         </p>
                     </Col>
-                    <Col>
-                        <img src={img} alt="Contact"  style={{ width:'300px' }}/>
+                    <Col className="d-flex justify-content-center align-items-center">
+                        <img src={img} alt="Contact"  style={{ width:'400px', borderRadius: '30px' }}/>
                     </Col>
                 </Row>
 
-                <h2> Proyección en las entidades y la comunidad </h2>
-                <p>
-                    Varias fueron las formas de inserción en la comunidad, a través de realizaciones culturales. Lo confirman las becas a estudiantes de escuelas técnicas, las acciones junto a otras entidades locales y zonales y la permanente asistencia allí donde hizo falta la presencia industrial, siempre que las circunstancias lo permitieron.
-                    Un ejemplo fue la organización de las dos ediciones de la Feria de la Flor realizada en Florencio Varela y el Encuentro Nacional de Museología Quilmes’83.
-                    Dentro de los movimientos que tuvieron lugar en el Distrito, la Unión adhirió activamente a las gestiones para la creación del Departamento Judicial y la Universidad Nacional de Quilmes.
-                </p>
+                <Row className='py-4'>
+                    <div className='cards-container'>
+                        <Card  style={{ width:'100%', maxWidth: '30rem' }}>
+                            <Card.Body>
+                                <Card.Title className='text-center '> <h4 className='color-text-1'>Becas educativas</h4></Card.Title>
+                                <Card.Text className='text-center color-text-2'>
+                                    <Card.Img style={{width:'50px', paddingRight: '5px'}} src={becas}/>    
+                                    Otorgamos becas a estudiantes tecnicos locales.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <Card  style={{ width:'100%', maxWidth: '30rem' }}>
+                            <Card.Body>
+                                <Card.Title className='text-center '> <h4 className='color-text-1'>Articulacion con entidades</h4></Card.Title>
+     
+                                <Card.Text className='text-center color-text-2'>
+                                    <Card.Img style={{width:'50px', paddingRight: '5px'}} src={becas}/>  
+                                    Acciones junto a entidades locales y zonales
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                            <Card  style={{ width:'100%', maxWidth: '30rem' }}>
+                            <Card.Body>
+                                <Card.Title className='text-center '><h4 className='color-text-1'>Feria de la Flor</h4></Card.Title>
+                                
+                                <Card.Text className='text-center color-text-2'>
+                                    <Card.Img style={{width:'50px', paddingRight: '5px'}} src={flor}/>   
+                                    Organizacion de la Feria de la Flor en Quilmes
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                            <Card  style={{ width:'100%', maxWidth: '30rem' }}>
+                            <Card.Body>
+                                <Card.Title className='text-center '><h4 className='color-text-1'>Universidad Nacional de Quilmes</h4></Card.Title>
+                         
+                                <Card.Text className='text-center '>
+                                    <Card.Img style={{width:'50px', paddingRight: '5px'}} src={uni}/>   
+                                    Gestiones con la UNQ para crear el Depto. Juridico
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                </Row>
+
 
             </div>
         </Container>

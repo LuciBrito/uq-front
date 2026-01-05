@@ -13,6 +13,14 @@ body{
     box-sizing: border-box;
 }
 
+.color-text-1{
+    color: #5762DF;
+   font-weight: 600;
+}
+.color-text-2{
+    color: #8588C5; 
+}
+
 header{
     color: #8588C5;
     padding: 5px 0;
@@ -229,8 +237,9 @@ footer{
   
 
 .row-historia{
-    background-color: #9ca2dd;
+    background-color: #5762DF;
     border-radius: 30px;
+    color: white;
     padding: 20px;
 }
 

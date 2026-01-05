@@ -7,7 +7,6 @@ export default function MainLayout() {
     <>
       <LandingHeader />
             <Outlet />
-
       <LandingFooter />
     </>
   );
