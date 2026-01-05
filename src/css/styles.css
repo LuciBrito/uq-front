@@ -411,7 +411,7 @@ footer{
 /* Media queries para laptops */
 
 /* Laptops grandes (1025px - 1366px) */
-@media (min-width: 1025px) and (max-width: 1920px) {
+@media (min-width: 1025px) and (max-width: 1480px) {
     .cards-container {
         display: flex !important  ;
         flex-direction: row !important;
