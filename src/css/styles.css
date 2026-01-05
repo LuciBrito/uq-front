@@ -197,6 +197,10 @@ header  .nav-links .btn-header:hover {
 .landing-container {
   height: 100vh;
 }
+.icon-info{
+    height: 80px;
+    
+}
 
 /*.landing-row {
   flex: 1;
@@ -207,6 +211,9 @@ header  .nav-links .btn-header:hover {
 }*/
 .card-info{
     transition: all 0.3s ease;
+    box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
 }
 .card-info:hover{
 
@@ -321,13 +328,13 @@ footer{
 .cards-container {
     display: flex !important  ;
     flex-direction: row !important;
-    flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
-    width: 70%;
+    width: 100%;
     max-width: fit-content;
-   
 }
+
+
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -406,11 +413,8 @@ footer{
 /* Laptops grandes (1025px - 1366px) */
 @media (min-width: 1025px) and (max-width: 1920px) {
     .cards-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 24px;
-        flex-wrap: none !important;
-       
+        display: flex !important  ;
+        flex-direction: row !important;
     }
     .card-info{
         max-width: 20rem !important;
@@ -418,9 +422,28 @@ footer{
     .landing-container {
         height: auto !important;
     }   
-    .parallax{
+    .aux-historia{
         height: auto    !important;
     }
+    .info-text-h1 {
+        font-size: 30px;
+    }
+    .info-text-p{
+        font-size: 14px;
+    }
+    .landing-row h1{
+        font-size: 80px;
+    }
+    .icon-info{
+        height: 40px;
+        
+    }
+    .img-info-card{
+        height: 25x;
+    }
+
+
+
 }
 
 /* Laptops pequeños / tablets en landscape (769px - 1024px) */
@@ -436,10 +459,10 @@ footer{
         max-width: 15rem !important;
     }
         .landing-container {
-        height: auto !important;
+        height: 100vh !important;
     }  
 
-        .parallax{
+        .aux-historia{
         height: auto    !important;
     }
 }

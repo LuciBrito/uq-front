@@ -22,7 +22,7 @@ export default function LandingContact() {
             <Col>
                 <LandingContactForm />
                 <div className='container-text-links'>  
-                  <a className="btn-title btn primary" href="#">Asociate</a>
+                  <a className="btn-title btn primary mt-1" href="#">Asociate</a>
                 </div>
             </Col>
 
