@@ -217,6 +217,7 @@ header  .nav-links .btn-header:hover {
     width: 100%;
     max-width: 25rem;
     height: auto;
+  
 }
 .card-info:hover{
 
@@ -330,7 +331,7 @@ footer{
 
 .cards-container {
     display: flex !important  ;
-    flex-direction: row !important;
+    flex-wrap: wrap ;
     gap: 24px;
     justify-content: center;
     width: 100%;
@@ -417,7 +418,9 @@ footer{
 @media (min-width: 1025px) and (max-width: 1480px) {
     .cards-container {
         display: flex !important  ;
+        flex-wrap: nowrap !important;
         flex-direction: row !important;
+        
     }
     .card-info{
         max-width: 20rem !important;
