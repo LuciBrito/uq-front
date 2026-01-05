@@ -12,7 +12,7 @@ import flor from './img/icons/flor-icon.svg';
 export default function Historia() {
   return (
    <section className='parallax'> 
-        <Container className='py-5 my-5 lading-container media-aux '>
+        <Container className='py-5 lading-container media-aux'>
             <h1 className='text-center color-text-1 '>Historia </h1>
             <h3 className='text-center color-text-2'>Mas de 50 años acompañando la insdustria local</h3>
             <div> 

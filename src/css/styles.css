@@ -418,6 +418,9 @@ footer{
     .landing-container {
         height: auto !important;
     }   
+    .parallax{
+        height: auto    !important;
+    }
 }
 
 /* Laptops pequeños / tablets en landscape (769px - 1024px) */
@@ -435,4 +438,8 @@ footer{
         .landing-container {
         height: auto !important;
     }  
+
+        .parallax{
+        height: auto    !important;
+    }
 }
