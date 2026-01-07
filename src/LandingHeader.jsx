@@ -1,8 +1,39 @@
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import logo from './img/logo-quilmes.png';
+import LandingNav from './LandingNav';
 
 export default function LandingHeader() {
+  // Estado para controlar si el submenú de 'Historia' está visible.
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  const menuOpenRef = useRef(null);
+
+  // Función para alternar el estado (mostrar/ocultar)
+  const toggleMenu = () => {
+    setMenuOpen(prev => !prev);
+  };
+useEffect(() => {
+    // Función que se ejecuta en cualquier clic en el documento
+    function handleClickOutside(event) {
+      // 4. Comprobar si el menú está visible Y si el clic NO ocurrió dentro del contenedor
+      //    (El 'current' es el elemento <li> al que apuntamos con useRef)
+      if (menuOpen && menuOpenRef.current && !menuOpenRef.current.contains(event.target)) {
+        setMenuOpen(false); // Si es clic afuera, ¡ciérralo!
+      }
+    }
+
+    // 5. Adjuntar el detector de eventos al documento cuando el componente se monta
+    document.addEventListener("mousedown", handleClickOutside);
+    
+    // 6. Función de limpieza: Se ejecuta cuando el componente se desmonta (o el efecto se vuelve a ejecutar)
+    //    Esto es VITAL para evitar fugas de memoria y que la función siga corriendo inútilmente
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuOpen]); // 7. La dependencia asegura que se reevalúe cuando el estado del menú cambie
+  
   return (
     <header>
       <nav>
@@ -17,10 +48,25 @@ export default function LandingHeader() {
             <Link to="/">
               Inicio
             </Link></li>
-          <li>
-            <Link to="/historia">
+          <li className='nav-item dropdown-container'
+          ref={menuOpenRef}>
+            <Link to="/"
+              className="dropdown-link"
+              onClick={(e) => {
+                e.preventDefault(); // Detiene la navegación de la URL
+                toggleMenu();
+              }}
+            >
               Institucional
             </Link>
+                    
+          {menuOpen && (
+            <ul className="dropdown-menu">
+              <li><Link to="/historia">Historia</Link></li>
+              <li><Link to="/historia">Comision directiva</Link></li>
+              <li><Link to="#hitos">Socios</Link></li>
+            </ul>
+          )}
           </li>
           <li>
             <Link to="">
@@ -40,82 +86,35 @@ export default function LandingHeader() {
           <li><Link to="#" className="btn-header">Asociate</Link></li>
         </ul>
       </nav>
+   
     </header>
   );
 }
 
 /*
 
-import { useState } from "react";
+ 
+          <a 
+            href="#historia" 
+            className="dropdown-link"
+            onClick={(e) => {
+              e.preventDefault(); // Detiene la navegación de la URL
+              toggleDropdown();
+            }}
+          >
+            Historia
+            Cambiamos la flecha según el estado para mejor feedback
+            <span className="dropdown-arrow"> {isDropdownVisible ? ' ▲' : ' ▼'}</span>
+          </a>
 
-export default function Header() {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <header className="header">
-      <div className="logo">UIQ</div>
-
-      <nav className="nav">
-        <a href="#">Inicio</a>
-
-        { 👇 MENU DESPLEGABLE }
-        <div
-          className={`nav-item ${open ? "open" : ""}`}
-          onMouseEnter={() => window.innerWidth > 992 && setOpen(true)}
-          onMouseLeave={() => window.innerWidth > 992 && setOpen(false)}
-        >
-          <span onClick={() => setOpen(!open)}>Institucional</span>
-
-          <div className="dropdown">
-            <a href="#">Historia</a>
-            <a href="#">Comisión Directiva</a>
-            <a href="#">Socios</a>
-          </div>
-        </div>
-
-        <a href="#">Servicios</a>
-        <a href="#">Capacitación</a>
-        <a href="#" className="btn-asociate">Asociate</a>
-      </nav>
-    </header>
-  );
-
-
-
-          <li>
-            <div
-              className={`nav-item ${openMenu === "quienes" ? "open" : ""}`}
-              onMouseEnter={() => handleEnter("quienes")}
-              onMouseLeave={handleLeave}
-            >
-              <a href="#" onClick={() => toggleMenu("quienes")}>
-                ¿Quiénes somos?
-              </a>
-              <div className="dropdown">
-                <a href="#">Historia</a>
-                <a href="#">Comisión Directiva</a>
-                <a href="#">Socios</a>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div
-              className={`nav-item ${openMenu === "departamentos" ? "open" : ""}`}
-              onMouseEnter={() => handleEnter("departamentos")}
-              onMouseLeave={handleLeave}
-            >
-              <a href="#" onClick={() => toggleMenu("departamentos")}>
-                Departamentos
-              </a>
-              <div className="dropdown">
-                <a href="#">Depto 1</a>
-                <a href="#">Depto 2</a>
-                <a href="#">Depto 3</a>
-              </div>
-            </div>
-          </li>
-
-
+          Submenú desplegable, visible si isDropdownVisible es true 
+          {isDropdownVisible && (
+            <ul className="dropdown-menu">
+               Opciones del submenú 
+              <li><a href="#origenes">Orígenes</a></li>
+              <li><a href="#trayectoria">Trayectoria</a></li>
+              <li><a href="#hitos">Hitos Clave</a></li>
+            </ul>
+          )}
   */
 

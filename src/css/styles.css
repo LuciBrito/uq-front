@@ -278,45 +278,6 @@ footer{
 
 
 
-.nav-item {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    top: 42%;
-}
-
-.dropdown {
-  position: absolute;;
-  top: 190%;
-  left: 0;
-  background: white;
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-  opacity: 0;
-  transform: translateY(10px);
-  pointer-events: none;
-  transition: all 0.2s ease;
-}
-
-.nav-item.open .dropdown {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.dropdown a {
-  display: block;
-  padding: 8px 14px;
-  border-radius: 8px;
-}
-
-.dropdown a:hover {
-  background: #f2f4ff;
-}
 
 .cards-container {
     display: flex !important  ;
@@ -435,4 +396,71 @@ footer{
         .landing-container {
         height: auto !important;
     }  
+}
+
+
+
+/* --- Contenedor Principal del Menú --- */
+.navbar {
+  background-color: #333; /* Fondo oscuro para la barra */
+  padding: 0;
+}
+
+.nav-list {
+  list-style: none; /* Quitar las viñetas */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Para que los ítems estén en línea */
+}
+
+/* --- Ítems del Menú Principal --- */
+.nav-item {
+  position: relative; /* Esencial para que el submenú se posicione correctamente */
+}
+
+.nav-item a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+
+/* --- Estilos para el Desplegable de 'Historia' --- */
+.dropdown-container {
+  /* No se necesita un estilo especial, solo que sea relativo */
+
+}
+
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* Posicionamiento y Apariencia del Submenú */
+  position: absolute; /* Para que 'flote' sobre el resto del contenido */
+  top: 100%; /* Coloca el submenú justo debajo del ítem padre ('Historia') */
+  left: 0;
+  background-color: #444 ; /* Un color ligeramente diferente */
+  border: 1px solid #555;
+    width: 250px; /* Ancho mínimo para las opciones */
+  z-index: 1000 !important; /* Asegura que esté por encima de otros elementos */
+  display: block !important;
+  
+}
+
+.dropdown-menu li a {
+  padding: 10px 20px;
+  color: #8588C5;;
+  min-width: 100%;
+  font-weight: 500;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #b9b9b9;
+}
+
+.dropdown-arrow {
+    font-size: 0.8em;
+    margin-left: 5px;
 }

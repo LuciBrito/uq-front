@@ -6,6 +6,7 @@ import img from './img/img-contact.png';
 
 import LandingContactForm from "./LandingContactForm";
 import LandingContactCard from './LandingContactCard';
+import LandingNav from './LandingNav';
 
 export default function LandingContact() {
   return (
@@ -27,7 +28,7 @@ export default function LandingContact() {
             </Col>
 
         </Row>    
-
+      <LandingNav></LandingNav>
     </Container>
   )
 }
