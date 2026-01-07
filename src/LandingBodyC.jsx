@@ -13,8 +13,8 @@ export default function LandingBodyC() {
     <Container className=" landing-container d-flex flex-wrap justify-content-center gap-4 px-8 py-4 py-lg-5   ">
         <div className='cards-container'>    
             <a className="text-decoration-none" href="">
-                <Card className=" card-info " style={{ width:'100%', maxWidth: '25rem' }}>
-                    <Card.Img variant="top" src={servicios}/>
+                <Card className=" card-info " >
+                    <Card.Img variant="top" className='img-info-card' src={servicios}/>
                     <Card.Body>
                         <Card.Title >
                             <h3 className='info-text-p text-center'>
@@ -28,8 +28,8 @@ export default function LandingBodyC() {
                 </Card>
             </a>
             <a className="text-decoration-none" href="">
-                <Card className=" card-info " style={{  width:'100%', maxWidth: '25rem' }}>
-                    <Card.Img variant="top" src={departamentos}/>
+                <Card className=" card-info " >
+                    <Card.Img variant="top" className='img-info-card' src={departamentos}/>
                     <Card.Body>
                         <Card.Title>
                             <h3 className='info-text-p text-center'>
@@ -43,8 +43,8 @@ export default function LandingBodyC() {
                 </Card>
             </a>
             <a className="text-decoration-none" href="">
-                <Card className=" card-info " style={{  width:'100%', maxWidth: '25rem' }}>
-                    <Card.Img variant="top" src={novedades}/>
+                <Card className=" card-info " >
+                    <Card.Img variant="top"className='img-info-card' src={novedades}/>
                     <Card.Body>
                         <Card.Title>
                             <h3 className='info-text-p text-center'>
@@ -58,8 +58,8 @@ export default function LandingBodyC() {
                 </Card>
             </a>
             <a className="text-decoration-none" href="">
-                <Card className=" card-info " style={{  width:'100%', maxWidth: '25rem' }}>
-                    <Card.Img variant="top" src={asociarte}/>
+                <Card className=" card-info " >
+                    <Card.Img variant="top"  className='img-info-card' src={asociarte}/>
                     <Card.Body>
                         <Card.Title>
                             <h3 className='info-text-p text-center'>

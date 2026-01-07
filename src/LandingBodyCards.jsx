@@ -28,7 +28,7 @@ export function LandingBodyCards() {
       </Card>
       <Card>
         <Card.Body className='d-flex flex-column align-items-center'>
-          <Card.Title><img src={Ubicacion} alt="Ubicación" style={{height:'80px'}} /></Card.Title>
+          <Card.Title><img src={Ubicacion} alt="Ubicación" className='icon-info' /></Card.Title>
           <Card.Text>
               <p className='text-center'>
                 representacion regional

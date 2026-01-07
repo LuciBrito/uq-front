@@ -11,8 +11,8 @@ import flor from './img/icons/flor-icon.svg';
 
 export default function Historia() {
   return (
-   <section className='parallax'> 
-        <Container className='py-5 my-5 lading-container media-aux '>
+   <section className='parallax aux-historia'> 
+        <Container className='py-5 lading-container media-aux'>
             <h1 className='text-center color-text-1 '>Historia </h1>
             <h3 className='text-center color-text-2'>Mas de 50 años acompañando la insdustria local</h3>
             <div> 
@@ -62,7 +62,7 @@ export default function Historia() {
                 </Row>
 
                 <Row className='py-4'>
-                    <div className='cards-container'>
+                    <div className='d-flex flex-wrap justify-content-center align-items-center gap-4 cards-container '>
                         <Card  style={{ width:'100%', maxWidth: '30rem' }}>
                             <Card.Body>
                                 <Card.Title className='text-center '> <h4 className='color-text-1'>Becas educativas</h4></Card.Title>
