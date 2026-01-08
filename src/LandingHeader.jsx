@@ -63,7 +63,7 @@ useEffect(() => {
           {menuOpen && (
             <ul className="dropdown-menu">
               <li><Link to="/historia">Historia</Link></li>
-              <li><Link to="/historia">Comision directiva</Link></li>
+              <li><Link to="/comision-directiva">Comision directiva</Link></li>
               <li><Link to="#hitos">Socios</Link></li>
             </ul>
           )}
