@@ -19,7 +19,7 @@ export default function ComisionDirectiva() {
                 <Row className='py-4 '>
                     <Col className='d-flex justify-content-center'>
                         <Card  style={{ width:'100%', maxWidth: '18rem' }}>
-                            <Card.Img variant="top" src={horacio} style={{ height:'200px', width:'100%'}} />
+                            <Card.Img variant="top" src={horacio} style={{ height:'200px', width:'100%', width:'200px', borderRadius:'100%'}} />
                             <Card.Body>
                                 <Card.Title > <h3 className='color-text-1'>Horacio Castagnini</h3></Card.Title>
                                 <Card.Text className='color-text-2'>
@@ -33,7 +33,7 @@ export default function ComisionDirectiva() {
                 <Row className='row-historia py-4'>
                     <Col className='d-flex justify-content-center'>
                         <Card  style={{ width:'100%', maxWidth: '18rem' }}>
-                            <Card.Img variant="top" src={vice} style={{ height:'200px', width:'100%'}}/>
+                            <Card.Img variant="top" src={vice} style={{ height:'200px', width:'200px', borderRadius:'100%' }}/>
                             <Card.Body>
                                 <Card.Title > <h3 className='color-text-1'>Oscar Abal</h3></Card.Title>
                                 <Card.Text className='color-text-2'>
@@ -42,9 +42,9 @@ export default function ComisionDirectiva() {
                             </Card.Body>
                         </Card>
                     </Col>
-                     <Col className='d-flex justify-content-center'>
+                     <Col className='d-flex justify-content-center '>
                         <Card  style={{ width:'100%', maxWidth: '18rem' }}>
-                            <Card.Img variant="top" src={secretario} style={{ height:'200px', width:'100%'}} />
+                            <Card.Img variant="top" src={secretario} style={{ height:'200px', width:'200px', borderRadius:'100%'}} />
                             <Card.Body>
                                 <Card.Title > <h3 className='color-text-1'>Nestor Boffelli</h3></Card.Title>
                                 <Card.Text className='color-text-2'>
@@ -55,7 +55,7 @@ export default function ComisionDirectiva() {
                     </Col>
                      <Col className='d-flex justify-content-center'>
                         <Card  style={{ width:'100%', maxWidth: '18rem' }}>
-                            <Card.Img variant="top" src={tesorero} style={{ height:'200px', width:'100%'}}/>
+                            <Card.Img variant="top" src={tesorero} style={{ height:'200px', width:'200px', borderRadius:'100%'}}/>
                             <Card.Body>
                                 <Card.Title > <h3 className='color-text-1'>Alejandro Felipe</h3></Card.Title>
                                 <Card.Text className='color-text-2'>
