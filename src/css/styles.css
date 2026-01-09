@@ -80,6 +80,72 @@ header  .nav-links .btn-header:hover {
     color: black;
 }
 
+/* --- Contenedor Principal del Menú --- */
+.navbar {
+  background-color: #333; /* Fondo oscuro para la barra */
+  padding: 0;
+}
+
+.nav-list {
+  list-style: none; /* Quitar las viñetas */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Para que los ítems estén en línea */
+}
+
+/* --- Ítems del Menú Principal --- */
+.nav-item {
+  position: relative; /* Esencial para que el submenú se posicione correctamente */
+}
+
+.nav-item a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+
+/* --- Estilos para el Desplegable de 'Historia' --- */
+.dropdown-container {
+  /* No se necesita un estilo especial, solo que sea relativo */
+
+}
+
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* Posicionamiento y Apariencia del Submenú */
+  position: absolute; /* Para que 'flote' sobre el resto del contenido */
+  top: 100%; /* Coloca el submenú justo debajo del ítem padre ('Historia') */
+  left: 0;
+  background-color: #444 ; /* Un color ligeramente diferente */
+  border: 1px solid #555;
+    width: 250px; /* Ancho mínimo para las opciones */
+  z-index: 1000 !important; /* Asegura que esté por encima de otros elementos */
+  display: block !important;
+  
+}
+
+.dropdown-menu li a {
+  padding: 10px 20px;
+  color: #8588C5;;
+  min-width: 100%;
+  font-weight: 500;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #b9b9b9;
+}
+
+.dropdown-arrow {
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+
 
 .container-title{
     width: 100%;
@@ -255,24 +321,22 @@ footer{
 }
 
 .parallax {
-  height: 100vh;
+
   background-image: url('../img/fondolanding.png');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;transition: all 0.3s ease;
+
+  transition: all 0.3s ease;
 }
 
 .parallax2 {
-  height: 100vh;
+
   background-image: url('../img/img-footer.png');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  display: flex;
-  align-items: center;
+
   justify-content: center;transition: all 0.3s ease;
 }
 
@@ -297,6 +361,21 @@ footer{
     justify-content: center;
     width: 100%;
     max-width: fit-content;
+}
+
+
+/* AUXILIARES */
+
+.text-title{
+    color: white;
+    font-size: 30px;
+}
+.text-subt{
+    color: white;
+    font-size: 20px;
+}
+.text-p{
+    color: white;
 }
 
 
@@ -437,67 +516,3 @@ footer{
 
 
 
-/* --- Contenedor Principal del Menú --- */
-.navbar {
-  background-color: #333; /* Fondo oscuro para la barra */
-  padding: 0;
-}
-
-.nav-list {
-  list-style: none; /* Quitar las viñetas */
-  margin: 0;
-  padding: 0;
-  display: flex; /* Para que los ítems estén en línea */
-}
-
-/* --- Ítems del Menú Principal --- */
-.nav-item {
-  position: relative; /* Esencial para que el submenú se posicione correctamente */
-}
-
-.nav-item a {
-  display: block;
-  padding: 15px 20px;
-  text-decoration: none;
-  color: white;
-  transition: background-color 0.3s;
-}
-
-
-/* --- Estilos para el Desplegable de 'Historia' --- */
-.dropdown-container {
-  /* No se necesita un estilo especial, solo que sea relativo */
-
-}
-
-.dropdown-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  /* Posicionamiento y Apariencia del Submenú */
-  position: absolute; /* Para que 'flote' sobre el resto del contenido */
-  top: 100%; /* Coloca el submenú justo debajo del ítem padre ('Historia') */
-  left: 0;
-  background-color: #444 ; /* Un color ligeramente diferente */
-  border: 1px solid #555;
-    width: 250px; /* Ancho mínimo para las opciones */
-  z-index: 1000 !important; /* Asegura que esté por encima de otros elementos */
-  display: block !important;
-  
-}
-
-.dropdown-menu li a {
-  padding: 10px 20px;
-  color: #8588C5;;
-  min-width: 100%;
-  font-weight: 500;
-}
-
-.dropdown-menu li a:hover {
-  background-color: #b9b9b9;
-}
-
-.dropdown-arrow {
-    font-size: 0.8em;
-    margin-left: 5px;
-}
