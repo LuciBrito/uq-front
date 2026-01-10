@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from './img/logo-quilmes.png';
-import LandingNav from './LandingNav';
+
 
 export default function LandingHeader() {
   // Estado para controlar si el submenú de 'Historia' está visible.
@@ -64,7 +64,7 @@ useEffect(() => {
             <ul className="dropdown-menu">
               <li><Link to="/historia">Historia</Link></li>
               <li><Link to="/comision-directiva">Comision directiva</Link></li>
-              <li><Link to="#hitos">Socios</Link></li>
+              <li><Link to="/socios">Socios</Link></li>
             </ul>
           )}
           </li>
