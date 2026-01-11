@@ -369,7 +369,6 @@ export default function ComisionDirectiva() {
                     </Col>
                 </Row>
 
-
             </div>
         </Container>
 </section>

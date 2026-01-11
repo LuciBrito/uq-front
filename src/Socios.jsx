@@ -19,18 +19,22 @@ import quimica from './img/socios-quimica.png';
 import servicios from './img/socios-servicios.png';
 import textil from './img/socios-textil.png';
 import vidrio from './img/socios-vidrio.png';
+import CarouselSocios from './CarouselSocios';
+
+
 
 export default function Socios() {
   return (
    <section className='parallax aux-historia'> 
         <Container className='py-5 lading-container media-aux'>
-            <h1 className='text-center color-text-1 '>Nuestros Socios </h1>
+            <h1 className='text-center color-text-1 py-4'>Nuestros Socios </h1>
+            <h3 className='text-center color-text-2'>Empresas que forman parte de nuestra empresa</h3>
          
             <div> 
                 <Row className='py-4'>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={alimentos} />   
                                 <Card.Text className='color-text-1'>
                                     Alimentos y bebidas
@@ -38,9 +42,9 @@ export default function Socios() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={autopartes} />   
                                 <Card.Text className='color-text-1'>
                                     AutoPartes
@@ -48,9 +52,9 @@ export default function Socios() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={comercio} />   
                                 <Card.Text className='color-text-1'>
                                     Comercio y servicios
@@ -62,9 +66,9 @@ export default function Socios() {
 
 
                 <Row className='py-4'>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={construccion} />   
                                 <Card.Text className='color-text-1'>
                                     Construccion
@@ -72,9 +76,9 @@ export default function Socios() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={embalajes} />   
                                 <Card.Text className='color-text-1'>
                                     Envases y embalajes
@@ -82,9 +86,9 @@ export default function Socios() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={grafica} />   
                                 <Card.Text className='color-text-1'>
                                     Grafica y publicidad
@@ -96,9 +100,9 @@ export default function Socios() {
 
 
                 <Row className='py-4'>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={informatica} />   
                                 <Card.Text className='color-text-1'>
                                     Informatica
@@ -106,9 +110,9 @@ export default function Socios() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={insumos} />   
                                 <Card.Text className='color-text-1'>
                                     Insumos
@@ -116,9 +120,9 @@ export default function Socios() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center '>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={logistica} />   
                                 <Card.Text className='color-text-1'>
                                     Logistica
@@ -130,10 +134,10 @@ export default function Socios() {
 
 
 
-                                <Row className='py-4'>
-                    <Col>
+                <Row className='py-4'>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={maquinaria} />   
                                 <Card.Text className='color-text-1'>
                                     Maquinaria y equipos
@@ -141,9 +145,9 @@ export default function Socios() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={electricos} />   
                                 <Card.Text className='color-text-1'>
                                     Materiales electricos
@@ -151,9 +155,9 @@ export default function Socios() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={metalu} />   
                                 <Card.Text className='color-text-1'>
                                     Metalurgica
@@ -165,9 +169,9 @@ export default function Socios() {
 
 
                 <Row className='py-4'>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={papel} />   
                                 <Card.Text className='color-text-1'>
                                     Papel y carton
@@ -175,9 +179,9 @@ export default function Socios() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={plastico} />   
                                 <Card.Text className='color-text-1'>
                                     Plastico y caucho
@@ -185,9 +189,9 @@ export default function Socios() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={quimica} />   
                                 <Card.Text className='color-text-1'>
                                     Quimica
@@ -199,9 +203,9 @@ export default function Socios() {
 
 
                 <Row className='py-4'>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={servicios} />   
                                 <Card.Text className='color-text-1'>
                                     Servicio
@@ -209,9 +213,9 @@ export default function Socios() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={textil} />   
                                 <Card.Text className='color-text-1'>
                                     Textil e indumentaria
@@ -219,9 +223,9 @@ export default function Socios() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col>
+                    <Col className='d-flex justify-content-center'>
                         <Card className='shadow-lg' style={{ width:'100%', maxWidth: '20rem' , padding:'10px', borderRadius:'5&'}}>
-                            <Card.Body className='d-flex flex-row align-items-center justify-content-around'>
+                            <Card.Body className='d-flex flex-row align-items-center justify-content-between'>
                                 <Card.Img style={{width:'70px', paddingRight: '5px'}} src={vidrio} />   
                                 <Card.Text className='color-text-1'>
                                     Vidrio
@@ -231,6 +235,7 @@ export default function Socios() {
                     </Col>
                 </Row>
 
+            <CarouselSocios />
 
             </div>
         </Container>

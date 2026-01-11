@@ -364,6 +364,33 @@ footer{
 }
 
 
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.track {
+  display: flex;
+  align-content: center;
+  gap: 4rem;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.track img {
+  height: 120px;
+
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
+
+
 /* AUXILIARES */
 
 .text-title{
@@ -516,6 +543,5 @@ footer{
         height: auto    !important;
     }
 }
-
 
 
