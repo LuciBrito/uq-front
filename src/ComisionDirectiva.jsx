@@ -9,9 +9,9 @@ import vice from './img/ph-vicepresidente.png';
 
 export default function ComisionDirectiva() {
   return (
-   <section className='parallax aux-historia'> 
-        <Container className='py-5  media-aux'>
-            <h1 className='text-center color-text-1 '>Comision Directiva </h1>
+   <section className='parallax2 aux-historia container-fix'> 
+        <Container className='py-xl-10  media-aux'>
+            <h1 className='text-center color-text-1 pt-2'>Comision Directiva </h1>
             <h3 className='text-center color-text-2'>Autoridades que conducen nuestra institucion</h3>
             <div> 
                 
@@ -31,9 +31,9 @@ export default function ComisionDirectiva() {
                     </Col>
                 </Row>
                 
-                <Row className='row-historia py-4 text-secondary ' style={{backgroundColor:'#22347c'}}>
+                <Row className=' py-4 text-secondary ' >
                     <Col className='d-flex justify-content-center'>
-                        <Card  style={{ width:'100%', maxWidth: '18rem' }}>
+                        <Card className='shadow' style={{ width:'100%', maxWidth: '18rem' }}>
                             <div className='d-flex justify-content-center align-items-center'>
                                 <Card.Img variant="top" src={vice} style={{ height:'200px', width:'200px', borderRadius:'100%', paddingTop:'10px' }}/>
                             </div>
@@ -46,7 +46,7 @@ export default function ComisionDirectiva() {
                         </Card>
                     </Col>
                      <Col className='d-flex justify-content-center '>
-                        <Card  style={{ width:'100%', maxWidth: '18rem' }}>
+                        <Card className='shadow' style={{ width:'100%', maxWidth: '18rem' }}>
                             <div className='d-flex justify-content-center align-items-center'>    
                                 <Card.Img variant="top" src={secretario} style={{ height:'200px', width:'200px', borderRadius:'100%', paddingTop:'10px'}} />
                             </div>
@@ -59,7 +59,7 @@ export default function ComisionDirectiva() {
                         </Card>
                     </Col>
                      <Col className='d-flex justify-content-center'>
-                        <Card  style={{ width:'100%', maxWidth: '18rem' }}>
+                        <Card className='shadow' style={{ width:'100%', maxWidth: '18rem' }}>
                             <div className='d-flex justify-content-center align-items-center'>   
                                 <Card.Img variant="top" src={tesorero} style={{ height:'200px', width:'200px', borderRadius:'100%', paddingTop:'10px'}}/>
                             </div>

@@ -28,7 +28,7 @@ export default function Socios() {
    <section className='parallax aux-historia'> 
         <Container className='py-5 lading-container media-aux'>
             <h1 className='text-center color-text-1 py-4'>Nuestros Socios </h1>
-            <h3 className='text-center color-text-2'>Empresas que forman parte de nuestra empresa</h3>
+       
          
             <div> 
                 <Row className='py-4'>

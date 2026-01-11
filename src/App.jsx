@@ -5,6 +5,7 @@ import  Historia  from "./Historia";
 import MainLayout from "./MainLayout";
 import ComisionDirectiva from "./ComisionDirectiva";
 import Socios from "./Socios";
+import Servicios from "./Servicios";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/historia" element={<Historia />} />
         <Route path="/comision-directiva" element={<ComisionDirectiva />} />
         <Route path="/socios" element={<Socios />} />
+        <Route path="/servicios" element={<Servicios />} />
       </Route>
     </Routes>
 
