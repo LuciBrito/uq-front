@@ -582,7 +582,7 @@ footer{
         display: none !important;
     }
    
-   .parallax, .parallax2 {
+   .parallax, .parallax2, .parallax3 {
         padding: 20px;
     }
     
@@ -649,6 +649,11 @@ footer{
         flex-direction: row !important;
         
     }
+
+    .parallax, .parallax2, .parallax3 {
+        padding: 20px;
+    }
+    
     .card-info{
         max-width: 20rem !important;
         height: 100% !important;
@@ -677,9 +682,6 @@ footer{
     }
     .media-aux{
         padding-bottom: 20px;
-    }
-    .nav-aux{
-        margin-top: 90px !important;
     }
 
 
