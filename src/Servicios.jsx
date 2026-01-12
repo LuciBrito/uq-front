@@ -37,7 +37,7 @@ export default function Servicios() {
                                             Asistencia en Arquitectura y Desarrollo
                                         </h3>
                                     </Card.Title>
-                                    <Card.Text className='text-center'>
+                                    <Card.Text className='text-center '>
                                         Estudio A&D
                                     </Card.Text>
                                 </Card.Body>

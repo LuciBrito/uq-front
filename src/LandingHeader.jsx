@@ -62,9 +62,9 @@ useEffect(() => {
                     
           {menuOpen && (
             <ul className="dropdown-menu">
-              <li><Link to="/historia">Historia</Link></li>
-              <li><Link to="/comision-directiva">Comision directiva</Link></li>
-              <li><Link to="/socios">Socios</Link></li>
+              <li><Link to="/historia" onClick={() => setMenuOpen(false)}>Historia</Link></li>
+              <li><Link to="/comision-directiva" onClick={() => setMenuOpen(false)}>Comision directiva</Link></li>
+              <li><Link to="/socios" onClick={() => setMenuOpen(false)}>Socios</Link></li>
             </ul>
           )}
           </li>

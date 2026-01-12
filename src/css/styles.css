@@ -434,77 +434,161 @@ footer{
 
 
 
-/* Media Queries */
+/* Media Queries para Tablets y Móviles grandes (hasta 768px) */
 @media (max-width: 768px) {
-     html, body{
-        min-width: 100vh;
-        display: flex;
+    /* **GENERAL** */
+    /* Usar 'width: 100%' en lugar de 'min-width: 100vh' para evitar barras de desplazamiento horizontales */
+    html, body {
+        width: 100%;
+        min-width: unset; /* Desactivamos el min-width problemático */
+        overflow-x: hidden; /* Ocultamos la barra horizontal si aparece */
+        display: block; /* Volvemos a comportamiento normal */
     }
-   .aux-none{
-        display: none !important;
-    }
-
     .media-aux {
-        width: 100vh;
-     
+        width: 100% !important; /* Ajustamos para que ocupen todo el ancho */
     }
-   
+    .container-fix {
+        margin-top: 85px !important; /* Ajuste si el header cambia de altura */
+    }
 
-        .landing-container {
-        height: auto !important;
-    }   
+    /* **HEADER/NAV** */
+    header {
+        height: auto; /* Permitimos que se ajuste */
+        padding: 10px 0;
+    }
+    header nav {
+        justify-content: space-between; /* Mejora la separación */
+        padding: 0 15px; /* Añade relleno a los lados */
+    }
+    /* El logo se mantiene bien */
+
+    /* **SECCIÓN DE TÍTULO (Landing)** */
+    .container-title {
+        height: auto;
+        padding-top: 100px; /* Separación después del header fijo */
+        padding-bottom: 50px;
+    }
+    .container-title .container-text-title {
+        width: 90%; /* Ocupa casi todo el ancho */
+        margin-left: 5%; /* Centrado simple */
+        text-align: center; /* Centramos el texto */
+    }
+    .landing-row h1 {
+        font-size: 60px; /* Reducción de tamaño */
+        text-align: center;
+    }
+    .landing-row h3 {
+        font-size: 30px; /* Reducción de tamaño */
+        text-align: center;
+    }
+    .container-text-links {
+        display: flex;
+        flex-direction: column; /* Botones apilados */
+        align-items: center;
+        gap: 15px;
+    }
+    .container-text-links a {
+        width: 80%; /* Hacer los botones más anchos */
+        margin-right: 0;
+        text-align: center;
+    }
+
+    /* **SECCIÓN DE INFO (Cuerpo)** */
+    .container-body-info {
+        flex-direction: column; /* Apilamos la imagen y el texto */
+        height: auto; /* Permitimos que crezca */
+        padding: 50px 0;
+        gap: 30px;
+    }
+    .container-body-info .info-slider,
+    .container-body-info .info-text {
+        width: 90%; /* Ambos ocupan casi todo el ancho */
+        height: auto;
+    }
+    .info-text-h1 {
+        font-size: 40px;
+    }
+    .info-text-h2 {
+        font-size: 28px;
+    }
+    .info-text-h3 {
+        font-size: 22px;
+    }
+    .info-text-p {
+        font-size: 16px;
+    }
+
+    /* **CARTAS (Cards)** */
+    /* Mantenemos tus estilos de grid para las cartas, que funcionan bien */
     .cards-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: auto;
-        flex-wrap: none !important;
-      
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Pequeña reducción del min-width */
+        gap: 20px;
+        padding: 0 15px; /* Añade relleno para que no se peguen a los bordes */
+    }
+    .card-info {
+        max-width: 100% !important; /* Permitimos que se estiren al 100% de la columna */
+    }
 
-    }
-       .card-info{
-        max-width: 15rem !important;
-    }
+    /* Tus estilos existentes (se mantienen): */
+    .aux-none{ display: none !important; }
+    .landing-container { height: auto !important; } 
+    /* ... otros estilos que ya tenías ... */
 }
 
+/* Media Queries para Móviles Pequeños (hasta 480px) */
 @media (max-width: 480px) {
-       html, body{
-        min-width: 100vh;
-        display: flex;
+    /* **GENERAL** */
+    /* Aseguramos que los estilos de 768px se hereden y ajustamos solo lo necesario */
+    html, body {
+        /* Se usa el ajuste de 768px */
     }
-     .aux-none{
-        display: none !important;
-    }
-   
-    header nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
     .media-aux {
-         min-width: 100vh !important;
-     
+        /* Se usa el ajuste de 768px */
     }
-        .landing-container {
-        height: auto !important;
-    }   
+    
+    /* **HEADER/NAV** */
+    /* Ajustamos el logo y la navegación para ahorrar espacio */
+    header nav .header-logo img {
+        width: 80px; /* Logo ligeramente más pequeño */
+    }
 
+    /* **SECCIÓN DE TÍTULO (Landing)** */
+    .landing-row h1 {
+        font-size: 45px; /* Reducción adicional */
+    }
+    .landing-row h3 {
+        font-size: 25px;
+    }
+
+    /* **SECCIÓN DE INFO (Cuerpo)** */
     .info-text-h1 {
-        font-size: 33px;
+        font-size: 30px; /* Reducción de tamaño */
+    }
+    .info-text-h2 {
+        font-size: 22px;
+    }
+    .info-text-h3 {
+        font-size: 18px;
+    }
+    .info-text-p {
+        font-size: 14px;
     }
 
- 
+    /* **CARTAS (Cards)** */
     .cards-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 24px;
-        flex-wrap: none !important;
-        
+        /* Forzamos una sola columna para las cartas si es demasiado estrecho */
+        grid-template-columns: 1fr;
     }
     .card-info{
-        max-width: 15rem !important;
+        max-width: 100% !important; 
     }
+    
+    /* Tus estilos existentes (se mantienen): */
+    .aux-none{ display: none !important; }
+    .landing-container { height: auto !important; } 
+    /* ... otros estilos que ya tenías ... */
 }
-
 
 /* Media queries para laptops */
 

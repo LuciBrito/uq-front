@@ -9,6 +9,7 @@ import Linkedin from './img/icons/linkedin-icon.svg';
 import Ubicacion from './img/icons/location-icon.svg';
 import Telefono from './img/icons/phone-icon.svg';
 import Mensaje from './img/icons/message-icon.svg';
+import { Link } from 'react-router-dom';
 
 
 export default function LandingFooter() {
@@ -29,11 +30,31 @@ export default function LandingFooter() {
                 </Col>  
                 <Col className="text-center py-3 ">
                     <ul className='list-unstyled'>
-                        <li className='info-text-p pb-2'>Inicio</li>
-                        <li className='info-text-p pb-2'>Quienes somos</li>
-                        <li className='info-text-p pb-2'>Servicios</li>
-                        <li className='info-text-p pb-2'>Capacitacion</li>
-                        <li className='info-text-p pb-2'>Asociate</li>
+                        <li className='info-text-p pb-2'>
+                            <Link>
+                                Inicio
+                            </Link>
+                        </li>
+                        <li className='info-text-p pb-2'>
+                            <Link>
+                                Quienes somos
+                            </Link>
+                        </li>
+                        <li className='info-text-p pb-2'>
+                            <Link>
+                                Servicios  
+                            </Link>    
+                            </li>
+                        <li className='info-text-p pb-2'>
+                            <Link>
+                                Capacitacion
+                            </Link>
+                            </li>
+                        <li className='info-text-p pb-2'>
+                            <Link>
+                                Asociate
+                            </Link>
+                        </li>
                     </ul>
                 </Col>  
                 <Col className="text-center py-3 text-start">

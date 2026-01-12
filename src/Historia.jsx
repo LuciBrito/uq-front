@@ -77,7 +77,7 @@ export default function Historia() {
                                 <Card.Title className='text-center '> <h4 className='color-text-1'>Articulacion con entidades</h4></Card.Title>
      
                                 <Card.Text className='text-center color-text-2'>
-                                    <Card.Img style={{width:'50px', paddingRight: '5px'}} src={becas}/>  
+                                    <Card.Img style={{width:'50px', paddingRight: '5px'}} src={socios}/>  
                                     Acciones junto a entidades locales y zonales
                                 </Card.Text>
                             </Card.Body>
@@ -96,7 +96,7 @@ export default function Historia() {
                             <Card.Body>
                                 <Card.Title className='text-center '><h4 className='color-text-1'>Universidad Nacional de Quilmes</h4></Card.Title>
                          
-                                <Card.Text className='text-center '>
+                                <Card.Text className='text-center color-text-2'>
                                     <Card.Img style={{width:'50px', paddingRight: '5px'}} src={uni}/>   
                                     Gestiones con la UNQ para crear el Depto. Juridico
                                 </Card.Text>
