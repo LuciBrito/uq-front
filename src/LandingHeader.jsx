@@ -176,7 +176,7 @@ export default function LandingHeader() {
                 
                 <li><Link to="/Servicios" onClick={closeAllMenus}>Servicios</Link></li>
                 <li><Link to="#" onClick={closeAllMenus}>Capacitación</Link></li>
-                <li className='mobile-button'><Link to="/asociate" className="btn-header" onClick={closeAllMenus}>Asociate</Link></li>
+                <li className='mobile-button'><Link to='/asociate' className="btn-header" onClick={closeAllMenus}>Asociate</Link></li>
             </ul>
           </div>
       )}
