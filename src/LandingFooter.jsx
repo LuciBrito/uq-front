@@ -28,27 +28,27 @@ export default function LandingFooter() {
                     </div> 
                     
                 </Col>  
-                <Col className="text-center py-3 ">
+                <Col className="text-center py-3 aux-none">
                     <ul className='list-unstyled'>
                         <li className='info-text-p pb-2 '>
-                            <Link to='/'>
+                            <Link className='text-decoration-none' to='/'>
                                 Inicio
                             </Link>
                         </li>
                         <li className='info-text-p pb-2'>
-                            <Link to='/servicios'>
+                            <Link className='text-decoration-none' to='/servicios'>
                                 Servicios  
                             </Link>    
                             </li>
                         <li className='info-text-p pb-2'>
-                            <Link to='/'>
+                            <Link className='text-decoration-none' to='/asociate'>
                                 Asociate
                             </Link>
                         </li>
                     </ul>
                 </Col>  
-                <Col className="text-center py-3 text-start">
-                    <ul className='list-unstyled '>
+                <Col className="text-center py-3 text-start aux-none">
+                    <ul className='list-unstyled align-content-center'>
                         <li className='info-text-p pb-2 text-start'> <img src={Mensaje} className="icon-color" alt="Email" style={{ width: '20px', marginRight: '10px' }} />uiquilmes.adm@gmail.com</li>
                         <li className='info-text-p pb-2 text-start'><img src={Telefono} alt="Telefono" style={{ width: '20px', marginRight: '10px' }} />Telefono: 11 7522-7496</li>
                         <li className='info-text-p pb-2 text-start'><img src={Ubicacion} alt="Ubicacion" style={{ width: '20px', marginRight: '10px' }} />Direccion: Alvear 867, B1878 Quilmes</li>
@@ -62,7 +62,7 @@ export default function LandingFooter() {
         <Container>
             <Row>
                 <Col className="text-center py-3">
-                    <span className='info-text-p'>© 2026 Copyright Union Industrial de Quilmes  </span>
+                    <span className='info-text-p'>© 2026 Union Industrial de Quilmes  </span>
                    
                 </Col>
                 <Col className="text-center py-3">

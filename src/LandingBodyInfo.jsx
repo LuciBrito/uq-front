@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import LandingCarousel from './LandingCarousel';
 import { LandingBodyCards } from './LandingBodyCards';
+import { Link } from 'react-router-dom';
 
 export default function LandingBodyInfo() {
   return (
@@ -24,8 +25,9 @@ export default function LandingBodyInfo() {
 
 
             <div className="container-text-links">
-                <a className="btn btn-title " href="#">Conocé nuestros servicios</a>
-                <a className="btn btn-title " href="#">Asociate</a>
+                <Link className="btn btn-title " to="/servicios">Conocé nuestros servicios</Link>
+                <Link className="btn btn-title " to="/asociate">Asociate</Link>
+          
             </div>
           </Col>
         </Row>

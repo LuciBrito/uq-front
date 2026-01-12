@@ -6,6 +6,7 @@ import MainLayout from "./MainLayout";
 import ComisionDirectiva from "./ComisionDirectiva";
 import Socios from "./Socios";
 import Servicios from "./Servicios";
+import Asociate from "./Asociate";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/comision-directiva" element={<ComisionDirectiva />} />
         <Route path="/socios" element={<Socios />} />
         <Route path="/servicios" element={<Servicios />} />
+           <Route path="/asociate" element={<Asociate />} />
       </Route>
     </Routes>
 

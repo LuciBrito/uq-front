@@ -371,9 +371,8 @@ footer{
 
 
 .carousel {
-  overflow: hidden;
-  width: 100%;
-  padding: 2rem 0;
+    overflow-x: hidden; /* Aseguramos que el eje X se oculte */
+    width: 100%;
 }
 
 .track {
@@ -512,11 +511,17 @@ footer{
    .aux-none{
         display: none !important;
     }
-
+  
     .media-aux {
         width: 100vh;
      
     }
+
+    .parallax, .parallax2 {
+        padding: 20px;
+    }
+
+
    header {
         position: sticky; 
         top: 0; 
@@ -549,11 +554,20 @@ footer{
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: auto;
         flex-wrap: none !important;
-      
-
     }
-       .card-info{
+
+        .icon-info{
+        height: 40px;
+    }
+
+    
+
+    .card-info{
         max-width: 15rem !important;
+    }
+
+    .info-text-p{
+        font-size: 15px;
     }
 
 
@@ -568,7 +582,9 @@ footer{
         display: none !important;
     }
    
-
+   .parallax, .parallax2 {
+        padding: 20px;
+    }
     
     .desktop-nav {
         display: none !important;
@@ -599,6 +615,9 @@ footer{
     .info-text-h1 {
         font-size: 33px;
     }
+    .icon-info{
+        height: 40px;
+    }
 
  
     .cards-container {
@@ -611,6 +630,12 @@ footer{
     .card-info{
         max-width: 15rem !important;
     }
+
+
+    .info-text-p{
+        font-size: 15px;
+    }
+
 }
 
 

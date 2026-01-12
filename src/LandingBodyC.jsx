@@ -5,6 +5,7 @@ import asociarte from './img/img-asociarte.png';
 import servicios from './img/img-servicios.png';
 import departamentos from './img/img-departamentos.png';
 import novedades from './img/img-novedades.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -12,7 +13,7 @@ export default function LandingBodyC() {
   return (
     <Container className=" landing-container d-flex flex-wrap justify-content-center gap-4 px-8 py-4 py-lg-5   ">
         <div className='cards-container'>    
-            <a className="text-decoration-none" href="">
+            <Link className="text-decoration-none" to="/servicios">
                 <Card className=" card-info shadow-lg  " >
                     <Card.Img variant="top" className='img-info-card' src={servicios}/>
                     <Card.Body>
@@ -26,8 +27,8 @@ export default function LandingBodyC() {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-            </a>
-            <a className="text-decoration-none" href="">
+            </Link>
+            <Link className="text-decoration-none" to="">
                 <Card className=" card-info shadow-lg " >
                     <Card.Img variant="top" className='img-info-card' src={departamentos}/>
                     <Card.Body>
@@ -41,8 +42,8 @@ export default function LandingBodyC() {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-            </a>
-            <a className="text-decoration-none" href="">
+            </Link>
+            <Link className="text-decoration-none" to="">
                 <Card className=" card-info shadow-lg " >
                     <Card.Img variant="top"className='img-info-card' src={novedades}/>
                     <Card.Body>
@@ -56,8 +57,8 @@ export default function LandingBodyC() {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-            </a>
-            <a className="text-decoration-none" href="">
+            </Link>
+            <Link className="text-decoration-none" to="/asociate">
                 <Card className=" card-info shadow-lg " >
                     <Card.Img variant="top"  className='img-info-card' src={asociarte}/>
                     <Card.Body>
@@ -71,7 +72,7 @@ export default function LandingBodyC() {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-            </a>
+            </Link>
         </div>
   </Container>
   );

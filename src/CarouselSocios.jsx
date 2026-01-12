@@ -18,21 +18,21 @@ import condAberdi from './img/cond-alberdi.jpg'
 export default function CarouselSocios() {
   return (
      <div className="carousel">
-      <div className="track">
-        <img src={acero} />
-        <img src={ab3} />
-        <img src={acropolis} />
-        <img src={alecar} />
-        <img src={boker} />
-        <img src={cas} />
-        <img src={catto} />
-        <img src={cerQuil} />
-        <img src={cervecQuil} />
-        <img src={cosme} />
-        <img src={codigo} />
-        <img src={comAmeri} />
-        <img src={condAberdi} />
-      </div>
+        <div className="track">
+            <img src={acero} />
+            <img src={ab3} />
+            <img src={acropolis} />
+            <img src={alecar} />
+            <img src={boker} />
+            <img src={cas} />
+            <img src={catto} />
+            <img src={cerQuil} />
+            <img src={cervecQuil} />
+            <img src={cosme} />
+            <img src={codigo} />
+            <img src={comAmeri} />
+            <img src={condAberdi} />
+        </div>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,8 +15,8 @@ export default function LandingBody() {
           <h3>+50 años representando a las empresas quilmeñas</h3>
 
           <div className="container-text-links">
-            <a className="btn-title btn" href="#">Conocé nuestros servicios</a>
-            <a className="btn-title btn primary" href="#">Asociate</a>
+            <Link className="btn-title btn" to="/servicios">Conocé nuestros servicios</Link>
+            <Link className="btn-title btn primary" to="/asociate">Asociate</Link>
           </div>
         </Col>
         <Col className='aux-none'>

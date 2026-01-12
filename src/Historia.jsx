@@ -11,8 +11,8 @@ import flor from './img/icons/flor-icon.svg';
 
 export default function Historia() {
   return (
-   <section className='parallax aux-historia container-fix'> 
-        <Container className='py-5 lading-container media-aux'>
+   <section className='parallax aux-historia'> 
+        <Container className=' media-aux'>
             <h1 className='text-center color-text-1 '>Historia </h1>
             <h3 className='text-center color-text-2'>Mas de 50 años acompañando la insdustria local</h3>
             <div> 
