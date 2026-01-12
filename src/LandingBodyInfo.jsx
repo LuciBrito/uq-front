@@ -8,7 +8,7 @@ import { LandingBodyCards } from './LandingBodyCards';
 
 export default function LandingBodyInfo() {
   return (
-    <Container className='landing-container container-fix align-items-center py-4 media-aux ' style={{marginTop:'100px'}}>
+    <Container className='landing-container container-fix align-items-center py-4 media-aux '>
         <Row >
           <Col>
              <h1 className='info-text-h1 pb-4'> ¿QUE HACEMOS? </h1>

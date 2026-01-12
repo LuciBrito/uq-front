@@ -25,7 +25,7 @@ header{
     color: #8588C5;
     padding: 5px 0;
     height: 80px;
-    position: fixed; /* Fija el elemento respecto a la ventana */
+    position: sticky; /* Fija el elemento respecto a la ventana */
     top: 0;          /* Lo pega en la parte superior */
     left: 0;         /* Lo pega a la izquierda */
     width: 100%;     /* Ocupa todo el ancho */
@@ -417,7 +417,7 @@ footer{
 /* AUXILIARES */
 
 .container-fix{
-    margin-top: 100px !important;
+    
 }
 
 .text-title{
@@ -432,163 +432,187 @@ footer{
     color: white;
 }
 
+/* Ocultar el botón de hamburguesa por defecto (solo se verá en móvil) */
+.burger-menu-button {
+    display: none; 
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    cursor: pointer;
+    color: #5762DF; /* Color de tu marca */
+    padding: 0;
+    line-height: 1;
+}
+
+/* Contenedor del menú que aparece al hacer clic */
+.mobile-menu-overlay {
+    position: absolute;
+    top: 80px; /* Debajo de la altura de tu header fijo */
+    left: 0;
+    width: 100%;
+    background-color: white; /* Color de fondo del menú desplegado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 90; 
+    padding-bottom: 20px;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.mobile-nav-links li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-nav-links li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #8588C5;
+    font-weight: 700;
+}
+
+.mobile-nav-links li a:hover {
+    background-color: #f7f7f7;
+    color: #283afc;
+}
+
+/* Ajustes específicos para el botón Asociate en móvil */
+.mobile-button {
+    padding: 15px 20px;
+}
 
 
-/* Media Queries para Tablets y Móviles grandes (hasta 768px) */
+/* Submenú Institucional dentro del menú móvil */
+.mobile-dropdown {
+    position: static; /* Cambia a static para que se muestre en línea */
+    background-color: #f7f7f7;
+    border: none;
+    width: 100%;
+    padding-left: 20px;
+}
+.mobile-dropdown li a {
+    padding: 10px 20px;
+}
+
+
+
+/* Media Queries */
 @media (max-width: 768px) {
-    /* **GENERAL** */
-    /* Usar 'width: 100%' en lugar de 'min-width: 100vh' para evitar barras de desplazamiento horizontales */
-    html, body {
-        width: 100%;
-        min-width: unset; /* Desactivamos el min-width problemático */
-        overflow-x: hidden; /* Ocultamos la barra horizontal si aparece */
-        display: block; /* Volvemos a comportamiento normal */
-    }
-    .media-aux {
-        width: 100% !important; /* Ajustamos para que ocupen todo el ancho */
-    }
-    .container-fix {
-        margin-top: 85px !important; /* Ajuste si el header cambia de altura */
-    }
-
-    /* **HEADER/NAV** */
-    header {
-        height: auto; /* Permitimos que se ajuste */
-        padding: 10px 0;
-    }
-    header nav {
-        justify-content: space-between; /* Mejora la separación */
-        padding: 0 15px; /* Añade relleno a los lados */
-    }
-    /* El logo se mantiene bien */
-
-    /* **SECCIÓN DE TÍTULO (Landing)** */
-    .container-title {
-        height: auto;
-        padding-top: 100px; /* Separación después del header fijo */
-        padding-bottom: 50px;
-    }
-    .container-title .container-text-title {
-        width: 90%; /* Ocupa casi todo el ancho */
-        margin-left: 5%; /* Centrado simple */
-        text-align: center; /* Centramos el texto */
-    }
-    .landing-row h1 {
-        font-size: 60px; /* Reducción de tamaño */
-        text-align: center;
-    }
-    .landing-row h3 {
-        font-size: 30px; /* Reducción de tamaño */
-        text-align: center;
-    }
-    .container-text-links {
+     html, body{
+        min-width: 100vh;
         display: flex;
-        flex-direction: column; /* Botones apilados */
-        align-items: center;
-        gap: 15px;
     }
-    .container-text-links a {
-        width: 80%; /* Hacer los botones más anchos */
-        margin-right: 0;
-        text-align: center;
+   .aux-none{
+        display: none !important;
     }
 
-    /* **SECCIÓN DE INFO (Cuerpo)** */
-    .container-body-info {
-        flex-direction: column; /* Apilamos la imagen y el texto */
-        height: auto; /* Permitimos que crezca */
-        padding: 50px 0;
-        gap: 30px;
+    .media-aux {
+        width: 100vh;
+     
     }
-    .container-body-info .info-slider,
-    .container-body-info .info-text {
-        width: 90%; /* Ambos ocupan casi todo el ancho */
-        height: auto;
-    }
-    .info-text-h1 {
-        font-size: 40px;
-    }
-    .info-text-h2 {
-        font-size: 28px;
-    }
-    .info-text-h3 {
-        font-size: 22px;
-    }
-    .info-text-p {
-        font-size: 16px;
+   header {
+        position: sticky; 
+        top: 0; 
+        z-index: 100;
+        height: auto; 
     }
 
-    /* **CARTAS (Cards)** */
-    /* Mantenemos tus estilos de grid para las cartas, que funcionan bien */
+    .desktop-nav {
+        display: none !important;
+    }
+    
+    /* 2. Mostrar el botón de hamburguesa */
+    .burger-menu-button {
+        display: block; 
+    }
+
+    /* 3. Ajuste de la navegación principal */
+    header nav {
+        justify-content: space-between; /* Para que el logo y el botón estén a los lados */
+        padding: 0 15px; /* Relleno a los lados para respirar */
+        display: flex;
+        flex-direction: row;
+    }
+
+    .landing-container {
+        height: auto !important;
+    }   
     .cards-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Pequeña reducción del min-width */
-        gap: 20px;
-        padding: 0 15px; /* Añade relleno para que no se peguen a los bordes */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: auto;
+        flex-wrap: none !important;
+      
+
     }
-    .card-info {
-        max-width: 100% !important; /* Permitimos que se estiren al 100% de la columna */
+       .card-info{
+        max-width: 15rem !important;
     }
 
-    /* Tus estilos existentes (se mantienen): */
-    .aux-none{ display: none !important; }
-    .landing-container { height: auto !important; } 
-    /* ... otros estilos que ya tenías ... */
+
 }
 
-/* Media Queries para Móviles Pequeños (hasta 480px) */
 @media (max-width: 480px) {
-    /* **GENERAL** */
-    /* Aseguramos que los estilos de 768px se hereden y ajustamos solo lo necesario */
-    html, body {
-        /* Se usa el ajuste de 768px */
+       html, body{
+        min-width: 100vh;
+        display: flex;
     }
-    .media-aux {
-        /* Se usa el ajuste de 768px */
+     .aux-none{
+        display: none !important;
+    }
+   
+
+    
+    .desktop-nav {
+        display: none !important;
     }
     
-    /* **HEADER/NAV** */
-    /* Ajustamos el logo y la navegación para ahorrar espacio */
-    header nav .header-logo img {
-        width: 80px; /* Logo ligeramente más pequeño */
+    /* 2. Mostrar el botón de hamburguesa */
+    .burger-menu-button {
+        display: block; 
     }
 
-    /* **SECCIÓN DE TÍTULO (Landing)** */
-    .landing-row h1 {
-        font-size: 45px; /* Reducción adicional */
-    }
-    .landing-row h3 {
-        font-size: 25px;
+    /* 3. Ajuste de la navegación principal */
+    header nav {
+        justify-content: space-between; /* Para que el logo y el botón estén a los lados */
+        padding: 0 15px; /* Relleno a los lados para respirar */
+              display: flex;
+        flex-direction: row;
     }
 
-    /* **SECCIÓN DE INFO (Cuerpo)** */
+
+    .media-aux {
+         min-width: 100vh !important;
+     
+    }
+        .landing-container {
+        height: auto !important;
+    }   
+
     .info-text-h1 {
-        font-size: 30px; /* Reducción de tamaño */
-    }
-    .info-text-h2 {
-        font-size: 22px;
-    }
-    .info-text-h3 {
-        font-size: 18px;
-    }
-    .info-text-p {
-        font-size: 14px;
+        font-size: 33px;
     }
 
-    /* **CARTAS (Cards)** */
+ 
     .cards-container {
-        /* Forzamos una sola columna para las cartas si es demasiado estrecho */
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        flex-wrap: none !important;
+        
     }
     .card-info{
-        max-width: 100% !important; 
+        max-width: 15rem !important;
     }
-    
-    /* Tus estilos existentes (se mantienen): */
-    .aux-none{ display: none !important; }
-    .landing-container { height: auto !important; } 
-    /* ... otros estilos que ya tenías ... */
 }
+
 
 /* Media queries para laptops */
 

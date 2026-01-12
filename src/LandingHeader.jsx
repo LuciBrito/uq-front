@@ -3,118 +3,170 @@ import { Link } from 'react-router-dom';
 
 import logo from './img/logo-quilmes.png';
 
-
 export default function LandingHeader() {
-  // Estado para controlar si el submenú de 'Historia' está visible.
-  const [menuOpen, setMenuOpen] = useState(false);
+  // Estado para controlar la visibilidad del MENÚ COMPLETO en móviles
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  // 💡 ESTADO CLAVE: Rastrea qué dropdown está abierto.
+  // Será 'institucional', 'departamentos', o null/'' si ninguno está abierto.
+  const [openDropdown, setOpenDropdown] = useState(null); 
 
-  const menuOpenRef = useRef(null);
+  const menuRef = useRef(null); 
 
-  // Función para alternar el estado (mostrar/ocultar)
-  const toggleMenu = () => {
-    setMenuOpen(prev => !prev);
+  // Función para alternar el estado del Menú Principal Móvil
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(prev => !prev);
+    // Al abrir/cerrar el menú principal, cerramos cualquier submenú abierto
+    setOpenDropdown(null); 
   };
-useEffect(() => {
-    // Función que se ejecuta en cualquier clic en el documento
+
+  // 💡 NUEVA FUNCIÓN: Alternar un dropdown específico por su ID
+  const toggleDropdown = (id) => {
+    // Si el dropdown actual (id) ya está abierto, lo cerramos (null).
+    // Si está cerrado, abrimos el nuevo dropdown (id).
+    setOpenDropdown(prevId => (prevId === id ? null : id));
+  };
+  
+  // Función para cerrar todo al navegar
+  const closeAllMenus = () => {
+      setIsMobileMenuOpen(false);
+      setOpenDropdown(null); // Cerramos cualquier submenú
+  }
+
+  // Lógica para cerrar el menú si se hace clic fuera
+  useEffect(() => {
     function handleClickOutside(event) {
-      // 4. Comprobar si el menú está visible Y si el clic NO ocurrió dentro del contenedor
-      //    (El 'current' es el elemento <li> al que apuntamos con useRef)
-      if (menuOpen && menuOpenRef.current && !menuOpenRef.current.contains(event.target)) {
-        setMenuOpen(false); // Si es clic afuera, ¡ciérralo!
+      if (isMobileMenuOpen && menuRef.current && !menuRef.current.contains(event.target)) {
+        closeAllMenus();
       }
     }
 
-    // 5. Adjuntar el detector de eventos al documento cuando el componente se monta
     document.addEventListener("mousedown", handleClickOutside);
-    
-    // 6. Función de limpieza: Se ejecuta cuando el componente se desmonta (o el efecto se vuelve a ejecutar)
-    //    Esto es VITAL para evitar fugas de memoria y que la función siga corriendo inútilmente
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [menuOpen]); // 7. La dependencia asegura que se reevalúe cuando el estado del menú cambie
-  
+  }, [isMobileMenuOpen]);
+
+  // Función auxiliar para determinar si un dropdown está abierto
+  const isDropdownOpen = (id) => openDropdown === id;
+
+
   return (
     <header>
       <nav>
-        <ul>
-          <div className="header-logo">
-            <img src={logo} alt="Logo de la empresa" />
-          </div>
-        </ul>
+        <div className="header-logo">
+          <img src={logo} alt="Logo de la empresa" />
+        </div>
+        
+        <button 
+          className="burger-menu-button" 
+          onClick={toggleMobileMenu}
+        >
+          {isMobileMenuOpen ? '✕' : '☰'} 
+        </button>
 
-        <ul className="nav-links aux-none">
-          <li>
-            <Link to="/">
-              Inicio
-            </Link></li>
+        {/* MENÚ DE ESCRITORIO */}
+        <ul className="nav-links desktop-nav">
+          <li><Link to="/">Inicio</Link></li>
+          
+          {/* ÍTEM INSTITUCIONAL (DROPDOWN DE ESCRITORIO) */}
           <li className='nav-item dropdown-container'
-          ref={menuOpenRef}>
+              onClick={() => toggleDropdown('institucional-desktop')} 
+          >
             <Link to="/"
               className="dropdown-link"
-              onClick={(e) => {
-                e.preventDefault(); // Detiene la navegación de la URL
-                toggleMenu();
-              }}
+              onClick={(e) => e.preventDefault()}
             >
               Institucional
             </Link>
-                    
-          {menuOpen && (
-            <ul className="dropdown-menu">
-              <li><Link to="/historia" onClick={() => setMenuOpen(false)}>Historia</Link></li>
-              <li><Link to="/comision-directiva" onClick={() => setMenuOpen(false)}>Comision directiva</Link></li>
-              <li><Link to="/socios" onClick={() => setMenuOpen(false)}>Socios</Link></li>
-            </ul>
-          )}
+            {/* 💡 Comprobamos si el dropdown 'institucional-desktop' está abierto */}
+            {isDropdownOpen('institucional-desktop') && (
+              <ul className="dropdown-menu" onClick={closeAllMenus}>
+                <li><Link to="/historia">Historia</Link></li>
+                <li><Link to="/comision-directiva">Comision directiva</Link></li>
+                <li><Link to="/socios">Socios</Link></li>
+              </ul>
+            )}
           </li>
-          <li>
-            <Link to="">
+
+          {/* ÍTEM DEPARTAMENTOS (DROPDOWN DE ESCRITORIO) */}
+          <li className='nav-item dropdown-container'
+              onClick={() => toggleDropdown('departamentos-desktop')}
+          >
+            <Link to="/"
+              className="dropdown-link"
+              onClick={(e) => e.preventDefault()}
+            >
               Departamentos
             </Link>
+            {/* 💡 Comprobamos si el dropdown 'departamentos-desktop' está abierto */}
+            {isDropdownOpen('departamentos-desktop') && (
+              <ul className="dropdown-menu" onClick={closeAllMenus}>
+                <li><Link to="/">Jovenes Empresarios</Link></li>
+                <li><Link to="/">Parques Industriales</Link></li>
+                <li><Link to="/socios">Comercio Exterior</Link></li>
+              </ul>
+            )}
           </li>
-          <li>
-            <Link to="/Servicios">
-              Servicios
-            </Link>
-          </li>
-          <li>
-            <Link to="">
-              Capacitación
-            </Link>
-          </li>
+
+          <li><Link to="/Servicios">Servicios</Link></li>
+          <li><Link to="">Capacitación</Link></li>
           <li><Link to="#" className="btn-header">Asociate</Link></li>
         </ul>
       </nav>
-   
+      
+      {/* MENÚ MÓVIL DESPLEGABLE */}
+      {isMobileMenuOpen && (
+          <div className="mobile-menu-overlay" ref={menuRef}>
+            <ul className="mobile-nav-links">
+                <li><Link to="/" onClick={closeAllMenus}>Inicio</Link></li>
+                
+                {/* ÍTEM INSTITUCIONAL (DROPDOWN MÓVIL) */}
+                <li className='nav-item dropdown-container'>
+                    <Link to="#" 
+                          className="dropdown-link" 
+                          onClick={(e) => {
+                                e.preventDefault(); 
+                                toggleDropdown('institucional-mobile'); // ID único
+                          }}>
+                        Institucional {isDropdownOpen('institucional-mobile') ? ' ▲' : ' ▼'}
+                    </Link>
+                    {/* 💡 Comprobamos si el dropdown 'institucional-mobile' está abierto */}
+                    {isDropdownOpen('institucional-mobile') && (
+                      <ul className="dropdown-menu mobile-dropdown">
+                        <li><Link to="/historia" onClick={closeAllMenus}>Historia</Link></li>
+                        <li><Link to="/comision-directiva" onClick={closeAllMenus}>Comision directiva</Link></li>
+                        <li><Link to="/socios" onClick={closeAllMenus}>Socios</Link></li>
+                      </ul>
+                    )}
+                </li>
+
+                {/* ÍTEM DEPARTAMENTOS (DROPDOWN MÓVIL) */}
+                <li className='nav-item dropdown-container'>
+                    <Link to="#" 
+                          className="dropdown-link" 
+                          onClick={(e) => {
+                                e.preventDefault(); 
+                                toggleDropdown('departamentos-mobile'); // ID único
+                          }}>
+                        Departamentos {isDropdownOpen('departamentos-mobile') ? ' ▲' : ' ▼'}
+                    </Link>
+                    {/* 💡 Comprobamos si el dropdown 'departamentos-mobile' está abierto */}
+                    {isDropdownOpen('departamentos-mobile') && (
+                      <ul className="dropdown-menu mobile-dropdown">
+                        <li><Link to="/" onClick={closeAllMenus}>Jovenes Empresarios</Link></li>
+                        <li><Link to="/" onClick={closeAllMenus}>Parques Industriales</Link></li>
+                        <li><Link to="/" onClick={closeAllMenus}>Comercio Exterior</Link></li>
+                      </ul>
+                    )}
+                </li>
+                
+                <li><Link to="/Servicios" onClick={closeAllMenus}>Servicios</Link></li>
+                <li><Link to="#" onClick={closeAllMenus}>Capacitación</Link></li>
+                <li className='mobile-button'><Link to="#" className="btn-header" onClick={closeAllMenus}>Asociate</Link></li>
+            </ul>
+          </div>
+      )}
     </header>
   );
 }
-
-/*
-
- 
-          <a 
-            href="#historia" 
-            className="dropdown-link"
-            onClick={(e) => {
-              e.preventDefault(); // Detiene la navegación de la URL
-              toggleDropdown();
-            }}
-          >
-            Historia
-            Cambiamos la flecha según el estado para mejor feedback
-            <span className="dropdown-arrow"> {isDropdownVisible ? ' ▲' : ' ▼'}</span>
-          </a>
-
-          Submenú desplegable, visible si isDropdownVisible es true 
-          {isDropdownVisible && (
-            <ul className="dropdown-menu">
-               Opciones del submenú 
-              <li><a href="#origenes">Orígenes</a></li>
-              <li><a href="#trayectoria">Trayectoria</a></li>
-              <li><a href="#hitos">Hitos Clave</a></li>
-            </ul>
-          )}
-  */
-

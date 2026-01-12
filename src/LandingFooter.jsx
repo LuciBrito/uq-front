@@ -30,28 +30,18 @@ export default function LandingFooter() {
                 </Col>  
                 <Col className="text-center py-3 ">
                     <ul className='list-unstyled'>
-                        <li className='info-text-p pb-2'>
-                            <Link>
+                        <li className='info-text-p pb-2 '>
+                            <Link to='/'>
                                 Inicio
                             </Link>
                         </li>
                         <li className='info-text-p pb-2'>
-                            <Link>
-                                Quienes somos
-                            </Link>
-                        </li>
-                        <li className='info-text-p pb-2'>
-                            <Link>
+                            <Link to='/servicios'>
                                 Servicios  
                             </Link>    
                             </li>
                         <li className='info-text-p pb-2'>
-                            <Link>
-                                Capacitacion
-                            </Link>
-                            </li>
-                        <li className='info-text-p pb-2'>
-                            <Link>
+                            <Link to='/'>
                                 Asociate
                             </Link>
                         </li>
