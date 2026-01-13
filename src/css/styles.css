@@ -347,7 +347,7 @@ footer{
 }
 
 .parallax3 {
-  height: 100vh;
+  
   background-image: url('../img/img-fondo.png');
   background-attachment: fixed;
   background-position: center;
