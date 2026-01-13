@@ -126,7 +126,7 @@ export default function LandingHeader() {
 
           <li><Link to="/Servicios">Servicios</Link></li>
           <li><Link to="">Capacitación</Link></li>
-          <li><Link to="#" className="btn-header">Asociate</Link></li>
+          <li><Link to="/asociate" className="btn-header">Asociate</Link></li>
         </ul>
       </nav>
       

@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 export default function LandingBodyC() {
   return (
-    <Container className=" landing-container d-flex flex-wrap justify-content-center gap-4 px-8 py-4 py-lg-5   ">
+    <Container className="  d-flex flex-wrap justify-content-center gap-4 px-8 py-4 py-lg-5   ">
         <div className='cards-container'>    
             <Link className="text-decoration-none" to="/servicios">
                 <Card className=" card-info shadow-lg  " >
