@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 export default function LandingBodyInfo() {
   return (
-    <Container className='landing-container container-fix d-flex justify-content-center align-items-center py-4 media-aux '>
+    <Container className='landing-container d-flex justify-content-center align-items-center py-4  media-aux '>
         <Row >
           <Col>
              <h1 className='info-text-h1 pb-4'> ¿QUE HACEMOS? </h1>
